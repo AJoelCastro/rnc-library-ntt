@@ -5,12 +5,41 @@ interface Props {
   transactions?: Transaction[];
 }
 
+const defaultTransactions: Transaction[] = [
+  {
+    id: 'tx-1',
+    type: 'income',
+    amount: 1200.0,
+    category: 'Sueldo',
+    date: new Date().toISOString(),
+    description: 'Pago mensual',
+  },
+  {
+    id: 'tx-2',
+    type: 'expense',
+    amount: 150.5,
+    category: 'Compras',
+    date: new Date().toISOString(),
+    description: 'Supermercado',
+  },
+  {
+    id: 'tx-3',
+    type: 'expense',
+    amount: 60.0,
+    category: 'Transporte',
+    date: new Date().toISOString(),
+    description: 'Taxi',
+  },
+];
+
 export const TransactionsHeader = ({ transactions }: Props) => {
-  const incomes = transactions
+  const tx = transactions && transactions.length ? transactions : defaultTransactions;
+
+  const incomes = tx
     .filter(t => t.type === 'income')
     .reduce((sum, t) => sum + t.amount, 0);
 
-  const expenses = transactions
+  const expenses = tx
     .filter(t => t.type === 'expense')
     .reduce((sum, t) => sum + t.amount, 0);
 
@@ -35,7 +64,7 @@ export const TransactionsHeader = ({ transactions }: Props) => {
       </View>
 
       <Text style={styles.subTitle}>
-        Mostrando 10 de {transactions.length} transacciones
+        Mostrando 10 de {tx.length} transacciones
       </Text>
     </View>
   );
