@@ -1,8 +1,8 @@
 import RncLibraryNtt, { type DeviceInfo } from './NativeRncLibraryNtt';
-import { TransactionItem } from './components/transaction/TransactionItem';
-import Button from './components/button/Button';
-import Password from './components/password/Password';
-import Modal from './components/modal/Modal';
+import { TransactionItem } from './components/organisms/transaction/TransactionItem';
+import Button from './components/atoms/button';
+import Password from './components/molecules/password';
+import Modal from './components/atoms/modal';
 
 export function multiply(a: number, b: number): number {
   return RncLibraryNtt.multiply(a, b);
