@@ -1,6 +1,25 @@
 #import "RncLibraryNtt.h"
+#import "RncLibraryNtt-Swift.h"
 
-@implementation RncLibraryNtt
+
+
+@implementation RncLibraryNtt{
+  DeviceUtils *_deviceUtils;
+}
+
+- (instancetype)init
+{
+  self = [super init];
+  if (self) {
+    _deviceUtils = [[DeviceUtils alloc] init];
+  }
+  return self;
+}
+
+- (nonnull NSDictionary *)getDeviceInfo {
+  return [_deviceUtils getDeviceInfo];
+}
+
 - (NSNumber *)multiply:(double)a b:(double)b {
     NSNumber *result = @(a * b);
 
