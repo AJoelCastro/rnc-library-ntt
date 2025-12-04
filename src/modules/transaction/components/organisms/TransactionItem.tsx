@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet } from 'react-native';
-import type { Transaction } from '../../../types/transaction';
+import type { Transaction } from '../../types';
 
 interface Props {
   item?: Transaction;
@@ -7,6 +7,7 @@ interface Props {
 
 export const TransactionItem = ({ item }: Props) => {
   const defaultTransaction: Transaction = {
+    id: 'default-id',
     type: 'expense',
     amount: 150.00,
     category: 'Compras',

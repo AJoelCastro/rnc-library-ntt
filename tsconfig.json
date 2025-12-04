@@ -2,7 +2,9 @@
   "compilerOptions": {
     "rootDir": ".",
     "paths": {
-      "react-native-rnc-library-ntt": ["./src/index"]
+      "react-native-rnc-library-ntt": ["./src/index"],
+      "@/modules/*": ["./src/modules/*"],
+      "@/shared/*": ["./src/shared/*"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

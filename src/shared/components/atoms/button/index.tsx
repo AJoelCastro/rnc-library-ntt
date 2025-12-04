@@ -1,5 +1,5 @@
 import { TouchableOpacity, Text, StyleSheet } from 'react-native'
-import type { Button as ButtonType } from '../../../types/transaction'
+import type { ButtonType } from '../../../types'
 
 type Props = {
     item?: ButtonType;
