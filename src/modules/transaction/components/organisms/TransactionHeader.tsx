@@ -32,7 +32,7 @@ const defaultTransactions: Transaction[] = [
   },
 ];
 
-export const TransactionsHeader = ({ transactions }: Props) => {
+export const TransactionHeader = ({ transactions }: Props) => {
   const tx = transactions && transactions.length ? transactions : defaultTransactions;
 
   const incomes = tx

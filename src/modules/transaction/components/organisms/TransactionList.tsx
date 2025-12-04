@@ -1,7 +1,7 @@
 import { FlatList, View, StyleSheet } from 'react-native';
 import { TransactionItem } from './TransactionItem';
 import type { Transaction } from '../../types';
-import { TransactionsHeader } from './TransactionHeader';
+import { TransactionHeader } from './TransactionHeader';
 
 interface Props {
   transactions?: Transaction[];
@@ -39,7 +39,7 @@ export const TransactionsList = ({ transactions }: Props) => {
 
   return (
     <View style={styles.container}>
-      <TransactionsHeader transactions={tx} />
+      <TransactionHeader transactions={tx} />
       <FlatList
         data={tx.slice(0, 10)}
         keyExtractor={(item) => item.id}

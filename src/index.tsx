@@ -1,9 +1,8 @@
 import RncLibraryNtt, { type DeviceInfo } from './NativeRncLibraryNtt';
-import { TransactionItem } from '@/modules/transaction/components/organisms/TransactionItem';
-import Button from '@/shared/components/atoms/button';
-import Password from '@/shared/components/molecules/password';
-import Modal from '@/shared/components/atoms/modal';
-
+import Button from './shared/components/atoms/button';
+import Password from './shared/components/molecules/password';
+import Modal from './shared/components/atoms/modal';
+import { TransactionItem, type Transaction, TransactionHeader, TransactionsList } from './modules/transaction';
 export function multiply(a: number, b: number): number {
   return RncLibraryNtt.multiply(a, b);
 }
@@ -27,6 +26,9 @@ export const APP_VERSION = '1.0.0';
 
 export {
   TransactionItem,
+  type Transaction,
+  TransactionsList,
+  TransactionHeader,
   Button,
   Password,
   Modal
