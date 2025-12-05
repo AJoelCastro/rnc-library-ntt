@@ -8,7 +8,7 @@ type Props = {
   editable?: boolean
 }
 
-const Password = ({
+export const Password = ({
   value = 'password123',
   onChangeText,
   placeholder = 'Ingrese su contraseña',
@@ -58,5 +58,3 @@ const styles = StyleSheet.create({
     padding: 8,
   },
 })
-
-export default Password

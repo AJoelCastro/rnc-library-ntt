@@ -12,7 +12,7 @@ type Props = {
   onClose?: () => void
 }
 
-const ModalComponent = ({
+export const ModalComponent = ({
   visible,
   type = 'alert',
   title = 'Tiempo de sesión terminada',
@@ -133,5 +133,3 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
 })
-
-export default ModalComponent

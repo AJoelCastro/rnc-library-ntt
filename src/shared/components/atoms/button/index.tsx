@@ -8,7 +8,7 @@ type Props = {
     type?: 'primary' | 'secondary';
 }
 
-const Button = ({ item, title, onPress, type = 'primary' }: Props) => {
+export const Button = ({ item, title, onPress, type = 'primary' }: Props) => {
     const buttonTitle = title || item?.title || 'Buscar'
     const buttonType = type || item?.type || 'primary'
     const handlePress = onPress || item?.onClick
@@ -37,4 +37,3 @@ const styles = StyleSheet.create({
         fontWeight: '600',
     },
 })
-export default Button
