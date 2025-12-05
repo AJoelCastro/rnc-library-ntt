@@ -64,7 +64,7 @@ export const TransactionHeader = ({ transactions }: Props) => {
       </View>
 
       <Text style={styles.subTitle}>
-        Mostrando 10 de {tx.length} transacciones
+        Mostrando {tx.length} de {tx.length} transacciones
       </Text>
     </View>
   );
