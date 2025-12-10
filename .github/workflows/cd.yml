@@ -1,4 +1,4 @@
-name: Publicación Continua (CD) en NPM
+name: CD
 
 on:
   # 🎯 El disparador (trigger) más seguro para publicación es una nueva etiqueta (tag)
