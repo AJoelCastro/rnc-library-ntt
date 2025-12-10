@@ -14,7 +14,7 @@ export const Header = ({ title = 'Cabecera', iconName = 'home', onBack }: Props)
       </TouchableOpacity>
 
       <View style={styles.center}>
-        {/* <Text style={styles.centerIcon}>{iconName}</Text> */}
+        <Text style={styles.centerIcon}>{iconName}</Text>
         <Text style={styles.title}>{title}</Text>
       </View>
 

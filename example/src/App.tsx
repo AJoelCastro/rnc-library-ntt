@@ -1,21 +1,24 @@
-import { View, StyleSheet, Text } from 'react-native';
-import { Button, Modal, Password, TransactionItem, getDeviceInfo } from 'react-native-rnc-library-ntt';
-import { useState } from 'react';
+import { View, StyleSheet } from 'react-native';
+import { TransactionsList, Header, Selector, Email } from 'react-native-rnc-library-ntt';
+// import { useState } from 'react';
 
-const info = getDeviceInfo();
+// const info = getDeviceInfo();
 
 export default function App() {
 
-  const [showModal, setshowModal] = useState<boolean>(false)
+  // const [showModal, setshowModal] = useState<boolean>(false)
 
   return (
     <View style={styles.container}>
-      <TransactionItem/>
-      <Button/>
-      <Password/>
-      <Button type="secondary" title="MODAL" onPress={()=>{setshowModal(!showModal)}}/>
-      <Modal visible={showModal} onClose={()=>setshowModal(false)}/>
-      <Text>Info: {JSON.stringify(info)}</Text>
+      <Header title='Transacciones'/>
+      <Email/>
+      {/* <Selector/> */}
+      {/* <Button/> */}
+      {/* <Password/> */}
+      {/* <Button type="secondary" title="MODAL" onPress={()=>{setshowModal(!showModal)}}/> */}
+      {/* <Modal visible={showModal} onClose={()=>setshowModal(false)}/> */}
+      {/* <Text>Info: {JSON.stringify(info)}</Text> */}
+      <TransactionsList/>
     </View>
   );
 }
@@ -23,9 +26,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
+    marginTop:50,
     justifyContent: 'center',
-    marginHorizontal: 8,
-    gap: 16
+    backgroundColor: '#f5f5f5',
   },
 });
