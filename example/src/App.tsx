@@ -1,5 +1,5 @@
 import { View, StyleSheet } from 'react-native';
-import { TransactionsList, Header, Selector, Email } from 'react-native-rnc-library-ntt';
+import { TransactionsList, Header, Email } from 'react-native-rnc-library-ntt';
 // import { useState } from 'react';
 
 // const info = getDeviceInfo();
