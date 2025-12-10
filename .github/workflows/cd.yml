@@ -1,0 +1,43 @@
+name: Publicación Continua (CD) en NPM
+
+on:
+  # 🎯 El disparador (trigger) más seguro para publicación es una nueva etiqueta (tag)
+  push:
+    tags:
+      # Este patrón coincide con tags como v1.0.0, v2.3.4, etc.
+      - 'v[0-9]+.[0-9]+.[0-9]+' 
+
+jobs:
+  publish:
+    # 🔗 Asegúrate de que este trabajo solo se ejecute si la CI ha pasado
+    # Esto es opcional si mantienes los archivos separados, pero es una buena práctica:
+    # needs: [lint, test, build-library] 
+    
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del Código
+        uses: actions/checkout@v4
+      
+      # 1. Configurar Node.js y el registro de NPM
+      - name: Configurar Node.js y NPM
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x' # Usa la misma versión que en tu CI si es posible
+          registry-url: 'https://registry.npmjs.org' # Necesario para la autenticación
+          
+      # 2. Instalar dependencias (necesario para el paso de 'prepare' si existe)
+      - name: Instalar Dependencias
+        run: yarn install --frozen-lockfile # o npm ci
+        
+      # 3. Compilar el paquete (Si no confías en el artifact de 'build-library')
+      # Si tu script 'prepare' es el que compila (como se ve en tu CI), ejecútalo.
+      - name: Preparar (Compilar) el paquete
+        run: yarn prepare
+
+      # 4. Publicar en NPM
+      - name: Publicar
+        run: npm publish
+        env:
+          # Inyecta el token de npm desde los secretos de GitHub
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
