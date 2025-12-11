@@ -1,5 +1,5 @@
 import { View, StyleSheet } from 'react-native';
-import { TransactionsList, Header, Card } from '@arturocastro/react-native-rnc-library-ntt';
+import { TransactionsList, Header } from '@arturocastro/react-native-rnc-library-ntt';
 // import { useState } from 'react';
 
 // const info = getDeviceInfo();
@@ -11,7 +11,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Header title='Transacciones'/>
-      <Card/>
+      {/* <ConfigItem onPress={()=>{}}/> */}
+      {/* <Card/> */}
       {/* <InputWithDelete/> */}
       {/* <Email/> */}
       {/* <Selector/> */}

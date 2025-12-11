@@ -1,6 +1,7 @@
 import RncLibraryNtt, { type DeviceInfo } from './NativeRncLibraryNtt';
 import { Button, type ButtonType, ModalComponent, Password, Header, Selector, Email, InputWithDelete } from './modules/shared';
 import { TransactionItem, type Transaction, TransactionHeader, TransactionsList, Card } from './modules/transaction';
+import { ConfigItem } from './modules/configuration';
 export function multiply(a: number, b: number): number {
   return RncLibraryNtt.multiply(a, b);
 }
@@ -35,5 +36,6 @@ export {
   Header,
   Email,
   InputWithDelete,
-  Card
+  Card,
+  ConfigItem
 }
