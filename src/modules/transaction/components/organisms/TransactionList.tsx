@@ -1,11 +1,8 @@
 import { FlatList, View, StyleSheet } from 'react-native';
 import { TransactionItem } from './TransactionItem';
-import type { Transaction } from '../../types';
 import { TransactionHeader } from './TransactionHeader';
+import type { Transaction, TransactionHeaderListProps } from '../../interfaces';
 
-interface Props {
-  transactions?: Transaction[];
-}
 
 const defaultTransactions: Transaction[] = [
   {
@@ -34,7 +31,7 @@ const defaultTransactions: Transaction[] = [
   },
 ];
 
-export const TransactionsList = ({ transactions }: Props) => {
+export const TransactionsList = ({ transactions }: TransactionHeaderListProps) => {
   const tx = transactions && transactions.length ? transactions : defaultTransactions;
 
   return (

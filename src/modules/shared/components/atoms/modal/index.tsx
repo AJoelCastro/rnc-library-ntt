@@ -1,16 +1,5 @@
+import type { ModalProps } from '@/modules/shared/interfaces'
 import { View, Text, Modal, TouchableOpacity, StyleSheet } from 'react-native'
-
-type ModalType = 'alert' | 'error' | 'success'
-
-type Props = {
-  visible: boolean
-  type?: ModalType
-  title?: string
-  description?: string
-  buttonTitle?: string
-  onButtonPress?: () => void
-  onClose?: () => void
-}
 
 export const ModalComponent = ({
   visible,
@@ -20,7 +9,7 @@ export const ModalComponent = ({
   buttonTitle = 'Aceptar',
   onButtonPress,
   onClose,
-}: Props) => {
+}: ModalProps) => {
   const getIconConfig = () => {
     switch (type) {
       case 'error':

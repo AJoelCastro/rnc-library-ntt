@@ -1,19 +1,13 @@
 import { View, TextInput, TouchableOpacity, StyleSheet, Text } from 'react-native'
 import { useState } from 'react'
-
-type Props = {
-  value?: string
-  onChangeText?: (text: string) => void
-  placeholder?: string
-  editable?: boolean
-}
+import type { InputWithDeleteProps } from '@/modules/shared/interfaces'
 
 export const InputWithDelete = ({
   value = '',
   onChangeText,
   placeholder = 'Ingrese texto',
   editable = true,
-}: Props) => {
+}: InputWithDeleteProps) => {
   const [text, setText] = useState(value)
 
   const handleChangeText = (newText: string) => {

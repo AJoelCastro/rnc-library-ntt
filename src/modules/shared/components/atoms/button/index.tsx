@@ -1,14 +1,9 @@
+import type { ButtonProps } from '@/modules/shared/interfaces'
 import { TouchableOpacity, Text, StyleSheet } from 'react-native'
-import type { ButtonType } from '../../../types'
 
-type Props = {
-    item?: ButtonType;
-    title?: string;
-    onPress?: () => void;
-    type?: 'primary' | 'secondary';
-}
 
-export const Button = ({ item, title, onPress, type = 'primary' }: Props) => {
+
+export const Button = ({ item, title, onPress, type = 'primary' }: ButtonProps) => {
     const buttonTitle = title || item?.title || 'Buscar'
     const buttonType = type || item?.type || 'primary'
     const handlePress = onPress || item?.onClick

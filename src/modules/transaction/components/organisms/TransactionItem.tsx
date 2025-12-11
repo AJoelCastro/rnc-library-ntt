@@ -1,11 +1,8 @@
 import { View, Text, StyleSheet } from 'react-native';
-import type { Transaction } from '../../types';
+import type { Transaction, TransactionItemProps } from '../../interfaces';
 
-interface Props {
-  item?: Transaction;
-}
 
-export const TransactionItem = ({ item }: Props) => {
+export const TransactionItem = ({ item }: TransactionItemProps) => {
   const defaultTransaction: Transaction = {
     id: 'default-id',
     type: 'expense',

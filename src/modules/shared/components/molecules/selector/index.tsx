@@ -1,17 +1,8 @@
 import { View, Text, TouchableOpacity, StyleSheet, FlatList } from 'react-native'
 import { useState } from 'react'
+import type { SelectorProps } from '@/modules/shared/interfaces'
+import type { SelectorItem } from '@/modules/shared/types'
 
-export type SelectorItem = {
-  id: string | number
-  label: string
-}
-
-type Props = {
-  items?: SelectorItem[]
-  onSelect?: (item: SelectorItem) => void
-  placeholder?: string
-  selectedId?: string | number
-}
 
 const defaultItems: SelectorItem[] = [
   { id: 1, label: 'D.N.I.' },
@@ -23,7 +14,7 @@ export const Selector = ({
   onSelect,
   placeholder = 'Seleccionar...',
   selectedId,
-}: Props) => {
+}: SelectorProps) => {
   const [isOpen, setIsOpen] = useState(false)
   const [selected, setSelected] = useState<SelectorItem | null>(
     selectedId ? items.find(item => item.id === selectedId) || null : null

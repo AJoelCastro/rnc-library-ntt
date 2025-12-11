@@ -1,13 +1,8 @@
 import { View, TextInput, StyleSheet } from 'react-native'
 import { useState } from 'react'
+import type { EmailProps } from '@/modules/shared/interfaces'
 
-type Props = {
-  value?: string
-  onChangeText?: (text: string) => void
-  placeholder?: string
-  editable?: boolean
-  onValidation?: (isValid: boolean) => void
-}
+
 
 const validateEmail = (email: string): boolean => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -20,7 +15,7 @@ export const Email = ({
   placeholder = 'Ingrese su correo electrónico',
   editable = true,
   onValidation,
-}: Props) => {
+}: EmailProps) => {
   const [email, setEmail] = useState(value)
   const isValid = validateEmail(email)
 

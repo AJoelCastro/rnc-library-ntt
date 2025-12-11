@@ -1,12 +1,8 @@
+import type { HeaderProps } from '@/modules/shared/interfaces'
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 
-type Props = {
-  title?: string
-  iconName?: string // Ionicons name for center icon
-  onBack?: () => void // callback for back action (no navigation implemented)
-}
 
-export const Header = ({ title = 'Cabecera', iconName = 'home', onBack }: Props) => {
+export const Header = ({ title = 'Cabecera', iconName = 'home', onBack }: HeaderProps) => {
   return (
     <View style={styles.wrapper}>
       <TouchableOpacity onPress={onBack} style={styles.leftButton} accessibilityLabel="back-button">

@@ -1,9 +1,5 @@
 import { View, Text, StyleSheet } from 'react-native';
-import type { Transaction } from '../../types';
-
-interface Props {
-  transactions?: Transaction[];
-}
+import type { Transaction, TransactionHeaderListProps } from '../../interfaces';
 
 const defaultTransactions: Transaction[] = [
   {
@@ -32,7 +28,7 @@ const defaultTransactions: Transaction[] = [
   },
 ];
 
-export const TransactionHeader = ({ transactions }: Props) => {
+export const TransactionHeader = ({ transactions }: TransactionHeaderListProps) => {
   const tx = transactions && transactions.length ? transactions : defaultTransactions;
 
   const incomes = tx

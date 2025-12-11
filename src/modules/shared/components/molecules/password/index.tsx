@@ -1,19 +1,15 @@
 import { View, TextInput, TouchableOpacity, StyleSheet, Text } from 'react-native'
 import { useState } from 'react'
+import type { PasswordProps } from '@/modules/shared/interfaces'
 
-type Props = {
-  value?: string
-  onChangeText?: (text: string) => void
-  placeholder?: string
-  editable?: boolean
-}
+
 
 export const Password = ({
   value = 'password123',
   onChangeText,
   placeholder = 'Ingrese su contraseña',
   editable = true,
-}: Props) => {
+}: PasswordProps) => {
   const [showPassword, setShowPassword] = useState(false)
 
   return (

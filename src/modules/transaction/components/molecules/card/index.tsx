@@ -1,17 +1,9 @@
+import type { CardProps } from '@/modules/transaction/interfaces';
+import type { CardType } from '@/modules/transaction/types';
 import React from 'react'
-import { View, Text, StyleSheet, type ViewStyle } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 
-type CardType = 'black' | 'platinum' | 'gold' | 'blue'
 
-export interface CardProps {
-  type?: CardType
-  amount?: string | number
-  cardNumber?: string
-  holderName?: string
-  expiry?: string
-  brand?: string
-  style?: ViewStyle
-}
 
 const colorMap: Record<CardType, { bg: string; stripe: string; accent?: string }> = {
   black: { bg: '#333333', stripe: 'rgba(255,255,255,0.06)', accent: '#000' },

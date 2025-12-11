@@ -1,8 +1,4 @@
-export type Transaction = {
-    id: string;
-    type: 'income' | 'expense';
-    amount: number;
-    category: string;
-    date: string; // ISO date string
-    description: string;
-}
+
+// MOLECULES TYPES
+export type CardType = 'black' | 'platinum' | 'gold' | 'blue'
+
