@@ -1,12 +1,9 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import type { ConnectionBadgeProps } from '../../interfaces';
 
-interface Props {
-  type: 'wifi' | 'cellular' | 'none' | 'unknown';
-  isConnected: boolean;
-}
 
-export const ConnectionBadge: React.FC<Props> = ({ type, isConnected }) => {
+export const ConnectionBadge: React.FC<ConnectionBadgeProps> = ({ type, isConnected }) => {
   const color = isConnected ? 'green' : 'red';
   const icon = type === 'wifi' ? '📶' : type === 'cellular' ? '📱' : '❌';
 

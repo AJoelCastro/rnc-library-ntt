@@ -3,20 +3,7 @@ import { Button, type ButtonType, ModalComponent, Password, Header, Selector, Em
 import { TransactionItem, type Transaction, TransactionHeader, TransactionsList, Card } from './modules/transaction';
 import { ConfigItem } from './modules/configuration';
 import { ChatSession } from './modules/chat';
-
-export function multiply(a: number, b: number): number {
-  return RncLibraryNtt.multiply(a, b);
-}
-export function capitalize(text: string): string {
-  if (!text || text.length === 0) {
-    return '';
-  }
-  return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
-}
-
-export function formatGreeting(name: string): string {
-  return `¡Hola, ${capitalize(name)}!`;
-}
+import { ConnectionBadge, NetworkStatusCard, useNetworkMonitor, type ConnectionInfo } from './modules/network-monitor';
 
 export function getDeviceInfo(): DeviceInfo {
   return RncLibraryNtt.getDeviceInfo();
@@ -40,5 +27,9 @@ export {
   InputWithDelete,
   Card,
   ConfigItem,
-  ChatSession
+  ChatSession,
+  ConnectionBadge,
+  NetworkStatusCard,
+  useNetworkMonitor,
+  type ConnectionInfo,
 }
