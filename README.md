@@ -108,6 +108,40 @@ import { ModalComponent } from '@arturocastro/react-native-rnc-library-ntt';
 >
   {/* Modal content */}
 </ModalComponent>
+
+### Chat Module
+
+A set of components for building chat interfaces inside your app. Includes a full `ChatSession` organism, a `SendButton` molecule, and shared types.
+
+- **ChatSession**: Full chat UI that displays messages, handles input and sending, and simulates replies. Uses `InputWithDelete` for text entry and a `SendButton` for submitting messages.
+
+```js
+import { ChatSession } from '@arturocastro/react-native-rnc-library-ntt';
+
+<ChatSession />
+```
+
+- **SendButton**: Small button component used by `ChatSession`. Example usage:
+
+```js
+import { SendButton } from '@arturocastro/react-native-rnc-library-ntt';
+
+<SendButton onPress={() => console.log('send')} />
+```
+
+- **Types**: `ChatSession` uses a simple `Message` shape:
+
+```ts
+type Message = {
+  id: string
+  text: string
+  sender: 'user' | 'bot'
+}
+```
+
+Notes:
+- `ChatSession` is exported from the library and can be embedded in any screen. It internally uses `InputWithDelete` and a `SendButton` molecule.
+- The component ships with basic styles and a small simulated bot reply; customize it by copying into your project or extending the exported components.
 ```
 
 ### Transaction Components

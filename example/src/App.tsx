@@ -1,5 +1,5 @@
 import { View, StyleSheet } from 'react-native';
-import { TransactionsList, Header, ChatSession } from '@arturocastro/react-native-rnc-library-ntt';
+import { TransactionsList, Header } from '@arturocastro/react-native-rnc-library-ntt';
 // import { useState } from 'react';
 
 // const info = getDeviceInfo();
@@ -11,7 +11,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Header title='Transacciones'/>
-      <ChatSession/>
+      {/* <ChatSession/> */}
       {/* <ConfigItem onPress={()=>{}}/> */}
       {/* <Card/> */}
       {/* <InputWithDelete/> */}
