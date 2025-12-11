@@ -1,4 +1,4 @@
-import { View, TextInput, StyleSheet, Text } from 'react-native'
+import { View, TextInput, StyleSheet } from 'react-native'
 import { useState } from 'react'
 
 type Props = {
@@ -49,11 +49,6 @@ export const Email = ({
         keyboardType="email-address"
         autoCapitalize="none"
       />
-      {email.length > 0 && (
-        <Text style={{ fontSize: 16, marginRight: 8 }}>
-          {isValid ? '✓' : '✗'}
-        </Text>
-      )}
     </View>
   )
 }
