@@ -1,4 +1,5 @@
 export { TransactionItem } from './components/organisms/TransactionItem'
 export { TransactionHeader } from './components/organisms/TransactionHeader'
 export { TransactionsList } from './components/organisms/TransactionList'
+export { Card } from './components/molecules/card'
 export type { Transaction } from './types'

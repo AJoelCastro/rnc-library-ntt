@@ -4,7 +4,7 @@
     "paths": {
       "@arturocastro/react-native-rnc-library-ntt": ["./src/index"],
       "@/modules/*": ["./src/modules/*"],
-      "@/shared/*": ["./src/shared/*"]
+      "@/shared/*": ["src/modules/shared/*"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
