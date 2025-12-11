@@ -5,13 +5,13 @@ A comprehensive React Native component library for NTT projects. Built with Type
 ## Installation
 
 ```sh
-npm install react-native-rnc-library-ntt
+npm install @arturocastro/react-native-rnc-library-ntt
 ```
 
 or
 
 ```sh
-yarn add react-native-rnc-library-ntt
+yarn add @arturocastro/react-native-rnc-library-ntt
 ```
 
 ## Features
@@ -30,7 +30,7 @@ yarn add react-native-rnc-library-ntt
 A flexible button component with different types.
 
 ```js
-import { Button, type ButtonType } from 'react-native-rnc-library-ntt';
+import { Button, type ButtonType } from '@arturocastro/react-native-rnc-library-ntt';
 
 <Button 
   title="Press me" 
@@ -42,7 +42,7 @@ import { Button, type ButtonType } from 'react-native-rnc-library-ntt';
 A customizable header component.
 
 ```js
-import { Header } from 'react-native-rnc-library-ntt';
+import { Header } from '@arturocastro/react-native-rnc-library-ntt';
 
 <Header title="My App" />
 ```
@@ -51,7 +51,7 @@ import { Header } from 'react-native-rnc-library-ntt';
 A secure password input component.
 
 ```js
-import { Password } from 'react-native-rnc-library-ntt';
+import { Password } from '@arturocastro/react-native-rnc-library-ntt';
 
 <Password 
   value={password}
@@ -63,7 +63,7 @@ import { Password } from 'react-native-rnc-library-ntt';
 An email input component with validation.
 
 ```js
-import { Email } from 'react-native-rnc-library-ntt';
+import { Email } from '@arturocastro/react-native-rnc-library-ntt';
 
 <Email 
   value={email}
@@ -75,7 +75,7 @@ import { Email } from 'react-native-rnc-library-ntt';
 A dropdown/picker component.
 
 ```js
-import { Selector } from 'react-native-rnc-library-ntt';
+import { Selector } from '@arturocastro/react-native-rnc-library-ntt';
 
 <Selector 
   options={[{ label: 'Option 1', value: '1' }]}
@@ -87,7 +87,7 @@ import { Selector } from 'react-native-rnc-library-ntt';
 An input field with a delete/clear button.
 
 ```js
-import { InputWithDelete } from 'react-native-rnc-library-ntt';
+import { InputWithDelete } from '@arturocastro/react-native-rnc-library-ntt';
 
 <InputWithDelete 
   value={text}
@@ -100,7 +100,7 @@ import { InputWithDelete } from 'react-native-rnc-library-ntt';
 A modal dialog component.
 
 ```js
-import { ModalComponent } from 'react-native-rnc-library-ntt';
+import { ModalComponent } from '@arturocastro/react-native-rnc-library-ntt';
 
 <ModalComponent 
   visible={isVisible}
@@ -116,7 +116,7 @@ import { ModalComponent } from 'react-native-rnc-library-ntt';
 A premium card display component supporting multiple card types (black, platinum, gold, blue).
 
 ```js
-import { Card, type CardProps } from 'react-native-rnc-library-ntt';
+import { Card, type CardProps } from '@arturocastro/react-native-rnc-library-ntt';
 
 <Card 
   type="gold"
@@ -141,7 +141,7 @@ import { Card, type CardProps } from 'react-native-rnc-library-ntt';
 A header component for transaction screens.
 
 ```js
-import { TransactionHeader } from 'react-native-rnc-library-ntt';
+import { TransactionHeader } from '@arturocastro/react-native-rnc-library-ntt';
 
 <TransactionHeader title="Recent Transactions" />
 ```
@@ -150,7 +150,7 @@ import { TransactionHeader } from 'react-native-rnc-library-ntt';
 A single transaction item display component.
 
 ```js
-import { TransactionItem, type Transaction } from 'react-native-rnc-library-ntt';
+import { TransactionItem, type Transaction } from '@arturocastro/react-native-rnc-library-ntt';
 
 const transaction: Transaction = {
   id: '1',
@@ -166,7 +166,7 @@ const transaction: Transaction = {
 A list component for displaying multiple transactions.
 
 ```js
-import { TransactionsList, type Transaction } from 'react-native-rnc-library-ntt';
+import { TransactionsList, type Transaction } from '@arturocastro/react-native-rnc-library-ntt';
 
 const transactions: Transaction[] = [
   // ... transaction array
@@ -181,7 +181,7 @@ const transactions: Transaction[] = [
 Get device information at runtime.
 
 ```js
-import { getDeviceInfo, type DeviceInfo } from 'react-native-rnc-library-ntt';
+import { getDeviceInfo, type DeviceInfo } from '@arturocastro/react-native-rnc-library-ntt';
 
 const deviceInfo: DeviceInfo = getDeviceInfo();
 ```
@@ -189,7 +189,7 @@ const deviceInfo: DeviceInfo = getDeviceInfo();
 ### Text Utilities
 
 ```js
-import { capitalize, formatGreeting } from 'react-native-rnc-library-ntt';
+import { capitalize, formatGreeting } from '@arturocastro/react-native-rnc-library-ntt';
 
 const greeting = formatGreeting('john'); // Returns: "¡Hola, John!"
 const capitalized = capitalize('hello'); // Returns: "Hello"
@@ -198,7 +198,7 @@ const capitalized = capitalize('hello'); // Returns: "Hello"
 ### Math Utilities
 
 ```js
-import { multiply } from 'react-native-rnc-library-ntt';
+import { multiply } from '@arturocastro/react-native-rnc-library-ntt';
 
 const result = multiply(3, 7); // Returns: 21
 ```
@@ -206,7 +206,7 @@ const result = multiply(3, 7); // Returns: 21
 ## Constants
 
 ```js
-import { APP_VERSION } from 'react-native-rnc-library-ntt';
+import { APP_VERSION } from '@arturocastro/react-native-rnc-library-ntt';
 
 console.log(APP_VERSION); // '1.0.0'
 ```
