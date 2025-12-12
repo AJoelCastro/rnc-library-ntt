@@ -9,11 +9,12 @@ import java.util.HashMap
 
 class RncLibraryNttPackage : BaseReactPackage() {
   override fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
-    return if (name == RncLibraryNttModule.NAME) {
-      RncLibraryNttModule(reactContext)
-    } else {
-      null
-    }
+    return when (name) {
+      RncLibraryNttModule.NAME -> RncLibraryNttModule(reactContext)
+      SecureStorageModule.NAME -> SecureStorageModule(reactContext)
+      NetworkMonitorModule.NAME -> NetworkMonitorModule(reactContext)// Registrar SecureStorage
+      else -> null
+    } as NativeModule?
   }
 
   override fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
@@ -26,6 +27,22 @@ class RncLibraryNttPackage : BaseReactPackage() {
         false,  // needsEagerInit
         false,  // isCxxModule
         true // isTurboModule
+      )
+      moduleInfos[SecureStorageModule.NAME] = ReactModuleInfo(
+        SecureStorageModule.NAME,
+        SecureStorageModule.NAME,
+        false,  // canOverrideExistingModule
+        false,  // needsEagerInit
+        false,  // isCxxModule
+        true    // isTurboModule
+      )
+      moduleInfos[NetworkMonitorModule.NAME] = ReactModuleInfo(
+        NetworkMonitorModule.NAME,
+        NetworkMonitorModule.NAME,
+        false,  // canOverrideExistingModule
+        false,  // needsEagerInit
+        false,  // isCxxModule
+        true    // isTurboModule
       )
       moduleInfos
     }

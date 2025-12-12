@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
-import { NativeEventEmitter } from 'react-native';
 import NativeNetworkMonitor from '../../../NativeNetworkMonitor';
 import type { ConnectionInfo } from '../types';
 
-const eventEmitter = new NativeEventEmitter(NativeNetworkMonitor);
+
 
 export const useNetworkMonitor = () => {
   const [connectionInfo, setConnectionInfo] = useState<ConnectionInfo | null>(null);
@@ -15,13 +14,6 @@ export const useNetworkMonitor = () => {
       .then(setConnectionInfo)
       .finally(() => setIsLoading(false));
 
-    // Subscribe to changes
-    const subscription = eventEmitter.addListener(
-      'networkStateChange',
-      (info: any) => setConnectionInfo(info as ConnectionInfo)
-    );
-
-    return () => subscription.remove();
   }, []);
 
   return { connectionInfo, isLoading };
