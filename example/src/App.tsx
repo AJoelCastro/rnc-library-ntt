@@ -1,17 +1,15 @@
 import { View, StyleSheet } from 'react-native';
-import { ChatSession, Header } from '@arturocastro/react-native-rnc-library-ntt';
+import {  Header } from '@arturocastro/react-native-rnc-library-ntt';
 // import { useState } from 'react';
 
 // const info = getDeviceInfo();
 
 export default function App() {
-
   // const [showModal, setshowModal] = useState<boolean>(false)
 
   return (
     <View style={styles.container}>
       <Header title='Transacciones'/>
-      <ChatSession/>
       {/* <ConfigItem onPress={()=>{}}/> */}
       {/* <Card/> */}
       {/* <InputWithDelete/> */}

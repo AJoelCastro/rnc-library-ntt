@@ -1,6 +1,6 @@
 # react-native-rnc-library-ntt
 
-A comprehensive React Native component library for NTT projects. Built with TypeScript and provides pre-built UI components, transaction management, and network monitoring utilities.
+A comprehensive React Native component library for NTT projects. Built with TypeScript and Turbo Modules, providing pre-built UI components, transaction management, chat interfaces, network monitoring, and native device utilities.
 
 ## Installation
 
@@ -16,11 +16,32 @@ yarn add @arturocastro/react-native-rnc-library-ntt
 
 ## Features
 
-- 🎨 Pre-built UI components (buttons, inputs, selectors, headers)
-- 💳 Transaction components and card display
-- 📱 Device information utilities
-- 🔧 Shared utilities and types
-- 📊 Network monitoring capabilities
+- 🎨 **Pre-built UI Components** — buttons, inputs, selectors, headers, modals
+- 💬 **Chat Module** — full chat interface with message bubbles and input handling
+- 💳 **Transaction Management** — card display and transaction lists
+- 📱 **Device Information** — native Turbo Module for device info (iOS + Android)
+- 🌐 **Network Monitoring** — connection status tracking with hooks and UI components
+- ⚙️ **Configuration Module** — settings/config items with customizable UI
+- 🔧 **Shared Utilities** — reusable types, interfaces, and helper components
+
+## Native Modules
+
+### Device Information (Turbo Module)
+
+The library exposes a native Turbo Module for accessing device information at runtime.
+
+```js
+import { getDeviceInfo, type DeviceInfo } from '@arturocastro/react-native-rnc-library-ntt';
+
+const deviceInfo = getDeviceInfo();
+// Returns: { deviceName, deviceModel, systemVersion, isTablet }
+```
+
+**DeviceInfo Properties:**
+- `deviceName: string` — Device name (e.g., "iPhone 15")
+- `deviceModel: string` — Device model identifier
+- `systemVersion: string` — OS version (e.g., "17.2")
+- `isTablet: boolean` — Whether the device is a tablet
 
 ## Components
 
@@ -97,23 +118,37 @@ import { InputWithDelete } from '@arturocastro/react-native-rnc-library-ntt';
 ```
 
 #### ModalComponent
-A modal dialog component.
+A modal dialog component with support for alert, error, and success types.
 
 ```js
 import { ModalComponent } from '@arturocastro/react-native-rnc-library-ntt';
 
 <ModalComponent 
   visible={isVisible}
+  type="alert"
+  title="Session Expired"
+  description="Please log in again"
+  buttonTitle="Accept"
+  onButtonPress={() => setIsVisible(false)}
   onClose={() => setIsVisible(false)}
->
-  {/* Modal content */}
-</ModalComponent>
+/>
+```
+
+**ModalComponent Props:**
+- `visible: boolean` — Controls modal visibility
+- `type?: 'alert' | 'error' | 'success'` — Modal type (default: 'alert')
+- `title?: string` — Modal title
+- `description?: string` — Modal description/message
+- `buttonTitle?: string` — Button text (default: 'Aceptar')
+- `onButtonPress?: () => void` — Button press handler
+- `onClose?: () => void` — Close/dismiss handler
 
 ### Chat Module
 
-A set of components for building chat interfaces inside your app. Includes a full `ChatSession` organism, a `SendButton` molecule, and shared types.
+A complete chat interface module with message display, input handling, and send functionality. Includes organisms, molecules, and shared types.
 
-- **ChatSession**: Full chat UI that displays messages, handles input and sending, and simulates replies. Uses `InputWithDelete` for text entry and a `SendButton` for submitting messages.
+#### ChatSession
+Full-featured chat UI organism that displays messages in a list, handles user input via `InputWithDelete`, and sends messages with simulated bot replies.
 
 ```js
 import { ChatSession } from '@arturocastro/react-native-rnc-library-ntt';
@@ -121,16 +156,27 @@ import { ChatSession } from '@arturocastro/react-native-rnc-library-ntt';
 <ChatSession />
 ```
 
-- **SendButton**: Small button component used by `ChatSession`. Example usage:
+**Features:**
+- Auto-scrolls to latest message
+- User messages display on the right (light purple bubbles)
+- Bot messages display on the left (white bubbles)
+- Automatic bot reply after 700ms
+- Keyboard-aware layout (iOS + Android)
+- Clear button for text input
+
+#### SendButton
+Molecule component for sending messages. Purple button with ">" icon.
 
 ```js
 import { SendButton } from '@arturocastro/react-native-rnc-library-ntt';
 
-<SendButton onPress={() => console.log('send')} />
+<SendButton onPress={() => handleSend()} />
 ```
 
-- **Types**: `ChatSession` uses a simple `Message` shape:
+**Props:**
+- `onPress?: () => void` — Press handler
 
+#### Chat Types
 ```ts
 type Message = {
   id: string
@@ -139,9 +185,10 @@ type Message = {
 }
 ```
 
-Notes:
-- `ChatSession` is exported from the library and can be embedded in any screen. It internally uses `InputWithDelete` and a `SendButton` molecule.
-- The component ships with basic styles and a small simulated bot reply; customize it by copying into your project or extending the exported components.
+**Notes:**
+- `ChatSession` internally uses `InputWithDelete` and `SendButton` molecules.
+- Messages are stored in component state; integrate with backend or Redux for persistence.
+- Bot reply is simulated; replace with API calls as needed.
 ```
 
 ### Transaction Components
@@ -209,15 +256,61 @@ const transactions: Transaction[] = [
 <TransactionsList transactions={transactions} />
 ```
 
+**Transaction Type:**
+```ts
+type Transaction = {
+  id: string
+  type: 'income' | 'expense'
+  amount: number
+  category: string
+  date: string // ISO date string
+  description: string
+}
+```
+
+### Configuration Module
+
+Settings and configuration UI components for app preferences.
+
+#### ConfigItem
+A single configuration item with icon, title, subtitle, and optional action handler.
+
+```js
+import { ConfigItem } from '@arturocastro/react-native-rnc-library-ntt';
+
+<ConfigItem
+  title="Notifications"
+  subtitle="Enable push notifications"
+  Icon={<MyIcon />}
+  onPress={() => handleConfigPress()}
+  showDivider={true}
+/>
+```
+
+**Props:**
+- `title?: string` — Config item title (default: 'Configuración')
+- `subtitle?: string` — Descriptive subtitle
+- `Icon?: React.ReactNode` — Custom icon component (default: ⚙️)
+- `iconSize?: number` — Icon size in pixels (default: 24)
+- `onPress?: () => void` — Press handler
+- `showDivider?: boolean` — Show divider line (default: true)
+- `disabled?: boolean` — Disable interaction (default: false)
+- `style?: ViewStyle` — Custom style overrides
+
+**Notes:**
+- ConfigItem becomes non-interactive when `disabled={true}` or no `onPress` provided.
+- Perfect for building Settings screens.
+
 ## Utilities
 
 ### Device Information
-Get device information at runtime.
+Get device information at runtime via native Turbo Module.
 
 ```js
 import { getDeviceInfo, type DeviceInfo } from '@arturocastro/react-native-rnc-library-ntt';
 
 const deviceInfo: DeviceInfo = getDeviceInfo();
+// { deviceName: "iPhone 15", deviceModel: "iPhone15,2", systemVersion: "17.2", isTablet: false }
 ```
 
 ### Text Utilities
@@ -244,6 +337,55 @@ import { APP_VERSION } from '@arturocastro/react-native-rnc-library-ntt';
 
 console.log(APP_VERSION); // '1.0.0'
 ```
+
+## Shared Types & Interfaces
+
+Common types and interfaces used across all modules:
+
+```ts
+// Button
+type ButtonType = 'primary' | 'secondary'
+
+// Selector
+type SelectorItem = {
+  id: string | number
+  label: string
+}
+
+// Modal
+type ModalType = 'alert' | 'error' | 'success'
+```
+
+## Module Architecture
+
+The library is organized into modular namespaces:
+
+- **`src/modules/shared`** — Atom/molecule components (Button, Header, Input, Email, Password, Selector, Modal)
+- **`src/modules/chat`** — Chat UI (ChatSession organism, SendButton molecule)
+- **`src/modules/transaction`** — Finance UI (Card, Transaction components)
+- **`src/modules/network_monitor`** — Network status (ConnectionBadge, NetworkStatusCard, hook)
+- **`src/modules/configuration`** — Settings UI (ConfigItem)
+- **Native Turbo Module** — Device info access
+
+All exports are available from the main entry point:
+
+```js
+import {
+  // Shared
+  Button, Header, Email, Password, InputWithDelete, Selector, ModalComponent,
+  // Chat
+  ChatSession, SendButton,
+  // Transaction
+  Card, TransactionItem, TransactionHeader, TransactionsList,
+  // Network
+  ConnectionBadge, NetworkStatusCard, useNetworkMonitor,
+  // Config
+  ConfigItem,
+  // Native
+  getDeviceInfo,
+  // Types
+  type ButtonType, type Transaction, type ConnectionInfo, type DeviceInfo
+} from '@arturocastro/react-native-rnc-library-ntt';
 
 ## Contributing
 
