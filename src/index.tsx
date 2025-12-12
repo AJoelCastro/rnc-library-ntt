@@ -4,6 +4,7 @@ import { TransactionItem, type Transaction, TransactionHeader, TransactionsList,
 import { ConfigItem } from './modules/configuration';
 import { ChatSession } from './modules/chat';
 import { ConnectionBadge, NetworkStatusCard, useNetworkMonitor, type ConnectionInfo } from './modules/network_monitor';
+import { SecureStorage } from './modules/secure_storage/store/SecureStorage';
 
 export function getDeviceInfo(): DeviceInfo {
   return RncLibraryNtt.getDeviceInfo();
@@ -32,4 +33,5 @@ export {
   NetworkStatusCard,
   useNetworkMonitor,
   type ConnectionInfo,
+  SecureStorage
 }

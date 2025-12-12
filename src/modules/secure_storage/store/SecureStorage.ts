@@ -9,5 +9,3 @@ export const SecureStorage = {
     return await NativeSecureStorage.getItem(key);
   },
 };
-
-export default SecureStorage;
