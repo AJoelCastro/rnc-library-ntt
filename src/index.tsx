@@ -3,7 +3,7 @@ import { Button, type ButtonType, ModalComponent, Password, Header, Selector, Em
 import { TransactionItem, type Transaction, TransactionHeader, TransactionsList, Card } from './modules/transaction';
 import { ConfigItem } from './modules/configuration';
 import { ChatSession } from './modules/chat';
-import { ConnectionBadge, NetworkStatusCard, useNetworkMonitor, type ConnectionInfo } from './modules/network-monitor';
+import { ConnectionBadge, NetworkStatusCard, useNetworkMonitor, type ConnectionInfo } from './modules/network_monitor';
 
 export function getDeviceInfo(): DeviceInfo {
   return RncLibraryNtt.getDeviceInfo();
