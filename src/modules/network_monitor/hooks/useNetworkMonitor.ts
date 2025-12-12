@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NativeEventEmitter } from 'react-native';
-import NativeNetworkMonitor from '../native/NativeNetworkMonitor';
+import NativeNetworkMonitor from '../../../NativeNetworkMonitor';
 import type { ConnectionInfo } from '../types';
 
 const eventEmitter = new NativeEventEmitter(NativeNetworkMonitor);
