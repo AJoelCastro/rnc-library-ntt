@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, StyleSheet, FlatList } from 'react-native'
 import { useState } from 'react'
-import type { SelectorProps } from '@/modules/shared/interfaces'
-import type { SelectorItem } from '@/modules/shared/types'
+import type { SelectorProps } from '../../../interfaces'
+import type { SelectorItem } from '../../../types'
 
 
 const defaultItems: SelectorItem[] = [

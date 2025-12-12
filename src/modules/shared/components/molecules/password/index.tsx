@@ -1,10 +1,10 @@
 import { View, TextInput, TouchableOpacity, StyleSheet, Text } from 'react-native'
 import { useState } from 'react'
-import type { PasswordProps } from '@/modules/shared/interfaces'
+import type { PasswordProps } from '../../../interfaces'
 
 
 
-export const Password = ({
+export const InputPassword = ({
   value = 'password123',
   onChangeText,
   placeholder = 'Ingrese su contraseña',

@@ -1,6 +1,6 @@
 import { View, TextInput, TouchableOpacity, StyleSheet, Text } from 'react-native'
 import { useState } from 'react'
-import type { InputWithDeleteProps } from '@/modules/shared/interfaces'
+import type { InputWithDeleteProps } from '../../../interfaces'
 
 export const InputWithDelete = ({
   value = '',

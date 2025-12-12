@@ -1,5 +1,5 @@
 import RncLibraryNtt, { type DeviceInfo } from './NativeRncLibraryNtt';
-import { Button, type ButtonType, ModalComponent, Password, Header, Selector, Email, InputWithDelete } from './modules/shared';
+import { Button, type ButtonType, ModalComponent, InputPassword, Header, Selector, InputEmail, InputWithDelete } from './modules/shared';
 import { TransactionItem, type Transaction, TransactionHeader, TransactionsList, Card } from './modules/transaction';
 import { ConfigItem } from './modules/configuration';
 import { ChatSession } from './modules/chat';
@@ -19,12 +19,12 @@ export {
   TransactionsList,
   TransactionHeader,
   Button,
-  Password,
+  InputPassword,
   ModalComponent,
   Selector,
   type ButtonType,
   Header,
-  Email,
+  InputEmail,
   InputWithDelete,
   Card,
   ConfigItem,

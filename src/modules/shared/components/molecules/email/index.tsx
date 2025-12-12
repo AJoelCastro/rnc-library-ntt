@@ -1,6 +1,6 @@
 import { View, TextInput, StyleSheet } from 'react-native'
 import { useState } from 'react'
-import type { EmailProps } from '@/modules/shared/interfaces'
+import type { EmailProps } from '../../../interfaces'
 
 
 
@@ -9,7 +9,7 @@ const validateEmail = (email: string): boolean => {
   return emailRegex.test(email)
 }
 
-export const Email = ({
+export const InputEmail = ({
   value = 'user@example.com',
   onChangeText,
   placeholder = 'Ingrese su correo electrónico',
@@ -65,5 +65,3 @@ const styles = StyleSheet.create({
     color: '#000',
   },
 })
-
-export default Email

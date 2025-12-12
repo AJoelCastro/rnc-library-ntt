@@ -1,4 +1,4 @@
-import type { ButtonProps } from '@/modules/shared/interfaces'
+import type { ButtonProps } from '../../../interfaces'
 import { TouchableOpacity, Text, StyleSheet } from 'react-native'
 
 
