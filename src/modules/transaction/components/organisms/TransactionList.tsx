@@ -2,7 +2,7 @@ import { FlatList, View, StyleSheet } from 'react-native';
 import { TransactionItem } from './TransactionItem';
 import { TransactionHeader } from './TransactionHeader';
 import type { Transaction, TransactionHeaderListProps } from '../../interfaces';
-
+import { useState } from 'react';
 
 const defaultTransactions: Transaction[] = [
   {
@@ -29,20 +29,144 @@ const defaultTransactions: Transaction[] = [
     date: new Date().toISOString(),
     description: 'Taxi',
   },
+  {
+    id: 'tx-4',
+    type: 'income',
+    amount: 300.0,
+    category: 'Freelance',
+    date: new Date().toISOString(),
+    description: 'Proyecto web',
+  },
+  {
+    id: 'tx-5',
+    type: 'expense',
+    amount: 80.0,
+    category: 'Ocio',
+    date: new Date().toISOString(),
+    description: 'Cena con amigos',
+  },
+  {
+    id: 'tx-6',
+    type: 'income',
+    amount: 200.0,
+    category: 'Venta',
+    date: new Date().toISOString(),
+    description: 'Venta de bicicleta',
+  },
+  {
+    id: 'tx-7',
+    type: 'expense',
+    amount: 40.0,
+    category: 'Salud',
+    date: new Date().toISOString(),
+    description: 'Medicinas',
+  },
+  {
+    id: 'tx-8',
+    type: 'income',
+    amount: 500.0,
+    category: 'Bonificación',
+    date: new Date().toISOString(),
+    description: 'Rendimiento laboral',
+  },
+  {
+    id: 'tx-9',
+    type: 'expense',
+    amount: 25.0,
+    category: 'Café',
+    date: new Date().toISOString(),
+    description: 'Café con amigos',
+  },
+  {
+    id: 'tx-10',
+    type: 'income',
+    amount: 150.0,
+    category: 'Regalo',
+    date: new Date().toISOString(),
+    description: 'Regalo de cumpleaños',
+  },
+  {
+    id: 'tx-11',
+    type: 'expense',
+    amount: 100.0,
+    category: 'Ropa',
+    date: new Date().toISOString(),
+    description: 'Compra de ropa',
+  },
+  {
+    id: 'tx-12',
+    type: 'income',
+    amount: 250.0,
+    category: 'Inversión',
+    date: new Date().toISOString(),
+    description: 'Ganancias de inversión',
+  },
+  {
+    id: 'tx-13',
+    type: 'expense',
+    amount: 70.0,
+    category: 'Entretenimiento',
+    date: new Date().toISOString(),
+    description: 'Entrada al cine',
+  },
+  {
+    id: 'tx-14',
+    type: 'income',
+    amount: 400.0,
+    category: 'Proyecto',
+    date: new Date().toISOString(),
+    description: 'Pago por proyecto freelance',
+  },
+  {
+    id: 'tx-15',
+    type: 'expense',
+    amount: 55.0,
+    category: 'Comida',
+    date: new Date().toISOString(),
+    description: 'Almuerzo fuera',
+  },
+  {
+    id: 'tx-16',
+    type: 'income',
+    amount: 180.0,
+    category: 'Venta',
+    date: new Date().toISOString(),
+    description: 'Venta de artículos usados',
+  },
+  {
+    id: 'tx-17',
+    type: 'expense',
+    amount: 90.0,
+    category: 'Transporte',
+    date: new Date().toISOString(),
+    description: 'Abono transporte mensual',
+  },
+  {
+    id: 'tx-18',
+    type: 'income',
+    amount: 220.0,
+    category: 'Bonificación',
+    date: new Date().toISOString(),
+    description: 'Bonificación por desempeño',
+  }
 ];
 
 export const TransactionsList = ({ transactions }: TransactionHeaderListProps) => {
-  const tx = transactions && transactions.length ? transactions : defaultTransactions;
+
+  const [tx, setTx] = useState<Transaction[]>(transactions && transactions.length ? transactions.slice(0,15) : defaultTransactions.slice(0,15));
 
   return (
     <View style={styles.container}>
       <TransactionHeader transactions={tx} />
       <FlatList
-        data={tx.slice(0, 10)}
+        data={tx}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => <TransactionItem item={item} />}
         showsVerticalScrollIndicator={false}
         scrollEnabled={true}
+        onEndReached={()=>{setTx(transactions && transactions.length ? transactions.slice(0,tx.length + 5) : defaultTransactions.slice(0,tx.length + 5))}}
+        onEndReachedThreshold={0.3}
+        // onRefresh={()=>{setTx(transactions ? transactions.slice(0,5) : defaultTransactions.slice(0,5))}}
       />
     </View>
   );

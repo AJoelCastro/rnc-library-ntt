@@ -1,5 +1,5 @@
 import { View, StyleSheet } from 'react-native';
-import {  Header } from '@arturocastro/react-native-rnc-library-ntt';
+import {  Header, TransactionsList } from '@arturocastro/react-native-rnc-library-ntt';
 // import { useState } from 'react';
 
 // const info = getDeviceInfo();
@@ -20,7 +20,7 @@ export default function App() {
       {/* <Button type="secondary" title="MODAL" onPress={()=>{setshowModal(!showModal)}}/> */}
       {/* <Modal visible={showModal} onClose={()=>setshowModal(false)}/> */}
       {/* <Text>Info: {JSON.stringify(info)}</Text> */}
-      {/* <TransactionsList/> */}
+      <TransactionsList/>
     </View>
   );
 }
