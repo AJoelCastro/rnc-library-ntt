@@ -1,6 +1,6 @@
 {
   "name": "@arturocastro/react-native-rnc-library-ntt",
-  "version": "1.6.14",
+  "version": "1.6.15",
   "description": "This are a library for NTT project",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
