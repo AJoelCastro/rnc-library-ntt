@@ -6,10 +6,26 @@ import { View, Text, StyleSheet } from 'react-native'
 
 
 const colorMap: Record<CardType, { bg: string; stripe: string; accent?: string }> = {
-  black: { bg: '#333333', stripe: 'rgba(255,255,255,0.06)', accent: '#000' },
-  platinum: { bg: '#F7B86B', stripe: 'rgba(255,255,255,0.06)', accent: '#F6A800' },
-  gold: { bg: '#FFB84D', stripe: 'rgba(255,255,255,0.06)', accent: '#FFA500' },
-  blue: { bg: '#2C8C9B', stripe: 'rgba(255,255,255,0.04)', accent: '#25737F' },
+  black: { 
+    bg: '#1A1A1A',
+    stripe: 'rgba(255,255,255,0.1)',
+    accent: '#000000'
+  },
+  platinum: { 
+    bg: '#C0C0C0', 
+    stripe: 'rgba(0,0,0,0.1)', 
+    accent: '#A9A9A9' 
+  },
+  gold: { 
+    bg: '#FFD700',
+    stripe: 'rgba(255,255,255,0.2)', 
+    accent: '#DAA520'
+  },
+  blue: { 
+    bg: '#007ACC', 
+    stripe: 'rgba(255,255,255,0.1)', 
+    accent: '#005580' 
+  },
 }
 
 function maskCardNumber(num?: string) {
