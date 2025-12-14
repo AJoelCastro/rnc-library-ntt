@@ -1,5 +1,5 @@
 import { View, TextInput, StyleSheet } from 'react-native'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { EmailProps } from '../../../interfaces'
 
 
@@ -24,6 +24,10 @@ export const InputEmail = ({
     onChangeText?.(text)
     onValidation?.(validateEmail(text))
   }
+  useEffect(() => {
+    setEmail(value)
+    onValidation?.(validateEmail(value))
+  }, [value, onValidation])
 
   return (
     <View
