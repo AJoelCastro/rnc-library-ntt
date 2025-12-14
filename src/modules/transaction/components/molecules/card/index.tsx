@@ -1,5 +1,5 @@
-import type { CardProps } from '@/modules/transaction/interfaces';
-import type { CardType } from '@/modules/transaction/types';
+import type { CardProps } from '../../../interfaces';
+import type { CardType } from '../../../types';
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
