@@ -19,6 +19,7 @@ export interface ButtonProps  {
     title?: string;
     onPress?: () => void;
     type?: 'primary' | 'secondary';
+    disabled?: boolean
 }
 
 export interface ModalProps {

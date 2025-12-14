@@ -3,7 +3,7 @@ import { TouchableOpacity, Text, StyleSheet } from 'react-native'
 
 
 
-export const Button = ({ item, title, onPress, type = 'primary' }: ButtonProps) => {
+export const Button = ({ item, title, onPress, type = 'primary', disabled }: ButtonProps) => {
     const buttonTitle = title || item?.title || 'Buscar'
     const buttonType = type || item?.type || 'primary'
     const handlePress = onPress || item?.onClick
@@ -13,6 +13,7 @@ export const Button = ({ item, title, onPress, type = 'primary' }: ButtonProps) 
             style={[styles.container, {backgroundColor: buttonType === 'primary' ? '#4c00ffff' : '#FFFFFF'}]}
             onPress={handlePress}
             activeOpacity={0.7}
+            disabled={disabled}
         >
             <Text style={[styles.text,{color: buttonType === 'primary' ? '#FFFFFF' : '#000000'}]}>{buttonTitle}</Text>
         </TouchableOpacity>
