@@ -1,4 +1,4 @@
-import { FlatList, View, StyleSheet } from 'react-native';
+import { FlatList, View, StyleSheet, Text } from 'react-native';
 import { TransactionItem } from './TransactionItem';
 import { TransactionHeader } from './TransactionHeader';
 import type { Transaction, TransactionHeaderListProps } from '../../interfaces';
@@ -152,14 +152,32 @@ const defaultTransactions: Transaction[] = [
 ];
 
 export const TransactionsList = ({ transactions }: TransactionHeaderListProps) => {
-
+  const [onEndReachedCalled, setOnEndReachedCalled] = useState(false);
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [tx, setTx] = useState<Transaction[]>(transactions && transactions.length ? transactions.slice(0,15) : defaultTransactions.slice(0,15));
+  
   const handleRefresh = async () => {
     setIsRefreshing(true); 
     setTx(transactions ? transactions.slice(0, 15) : defaultTransactions.slice(0, 15));
     setIsRefreshing(false); 
   };
+  
+  const handleOnEndReached = () => {
+    setOnEndReachedCalled(true);
+    setTimeout(() => {
+      setTx(transactions && transactions.length ? transactions.slice(0,tx.length + 5) : defaultTransactions.slice(0,tx.length + 5))
+    setOnEndReachedCalled(false);
+    }, 1000);
+  }
+
+  const FooterComponent = () => {
+    return onEndReachedCalled ? (
+      <View style={{ padding: 16, alignItems: 'center' }}>
+        <Text style={{ fontSize: 14, color: '#666' }}>Cargando más transacciones...</Text>
+      </View>
+    ) : null;
+  }
+  
   return (
     <View style={styles.container}>
       <TransactionHeader transactions={tx} />
@@ -169,10 +187,11 @@ export const TransactionsList = ({ transactions }: TransactionHeaderListProps) =
         renderItem={({ item }) => <TransactionItem item={item} />}
         showsVerticalScrollIndicator={false}
         scrollEnabled={true}
-        onEndReached={()=>{setTx(transactions && transactions.length ? transactions.slice(0,tx.length + 5) : defaultTransactions.slice(0,tx.length + 5))}}
+        onEndReached={handleOnEndReached}
         onEndReachedThreshold={0.3}
         onRefresh={handleRefresh}
         refreshing={isRefreshing}
+        ListFooterComponent={FooterComponent}
       />
     </View>
   );
