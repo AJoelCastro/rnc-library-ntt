@@ -153,8 +153,13 @@ const defaultTransactions: Transaction[] = [
 
 export const TransactionsList = ({ transactions }: TransactionHeaderListProps) => {
 
+  const [isRefreshing, setIsRefreshing] = useState(false);
   const [tx, setTx] = useState<Transaction[]>(transactions && transactions.length ? transactions.slice(0,15) : defaultTransactions.slice(0,15));
-
+  const handleRefresh = async () => {
+    setIsRefreshing(true); 
+    setTx(transactions ? transactions.slice(0, 15) : defaultTransactions.slice(0, 15));
+    setIsRefreshing(false); 
+  };
   return (
     <View style={styles.container}>
       <TransactionHeader transactions={tx} />
@@ -166,7 +171,8 @@ export const TransactionsList = ({ transactions }: TransactionHeaderListProps) =
         scrollEnabled={true}
         onEndReached={()=>{setTx(transactions && transactions.length ? transactions.slice(0,tx.length + 5) : defaultTransactions.slice(0,tx.length + 5))}}
         onEndReachedThreshold={0.3}
-        // onRefresh={()=>{setTx(transactions ? transactions.slice(0,5) : defaultTransactions.slice(0,5))}}
+        onRefresh={handleRefresh}
+        refreshing={isRefreshing}
       />
     </View>
   );
