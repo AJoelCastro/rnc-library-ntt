@@ -73,7 +73,7 @@ export const Selector = ({
 const styles = StyleSheet.create({
   container: {
     zIndex: 10,
-    flex: 1
+    marginBottom: 12, // Espacio para el siguiente elemento
   },
   trigger: {
     flexDirection: 'row',
@@ -85,8 +85,6 @@ const styles = StyleSheet.create({
     borderColor: '#7D2EFF',
     borderRadius: 8,
     backgroundColor: '#FFF',
-    marginVertical: 8,
-    marginHorizontal: 8,
   },
   triggerText: {
     fontSize: 16,
@@ -94,6 +92,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   dropdownContainer: {
+    position: 'absolute', // ✅ Hace que flote
+    top: '100%', // ✅ Se posiciona justo debajo del trigger
+    left: 0,
+    right: 0,
     backgroundColor: '#FFF',
     borderWidth: 1,
     borderColor: '#7D2EFF',
@@ -101,14 +103,21 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 12,
     borderBottomRightRadius: 12,
     overflow: 'hidden',
-    marginHorizontal: 8,
-    marginBottom: 4
+    marginTop: -1, // ✅ Para que se vea pegado al trigger
+    zIndex: 1000, // ✅ Asegura que esté por encima de otros elementos
+    // Sombra para darle efecto flotante
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.15,
+    shadowRadius: 8,
+    elevation: 5,
   },
   option: {
     paddingVertical: 12,
     paddingHorizontal: 16,
     borderBottomWidth: 1,
     borderBottomColor: '#EEE',
+    backgroundColor: '#FFF',
   },
   optionSelected: {
     backgroundColor: '#F0E6FF',
@@ -122,5 +131,3 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
 })
-
-
