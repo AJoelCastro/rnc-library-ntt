@@ -1,11 +1,7 @@
+import type { ServiceItemProps } from '../../../interfaces'
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 
-type Props = {
-  title: string
-  onPress?: () => void
-}
-
-export const ServiceItem = ({ title, onPress }: Props) => {
+export const ServiceItem = ({ title, onPress }: ServiceItemProps) => {
   return (
     <TouchableOpacity onPress={onPress} activeOpacity={0.7}>
       <View style={styles.container}>

@@ -29,3 +29,8 @@ export interface Transaction {
     date: string; // ISO date string
     description: string;
 }
+
+export interface ServiceItemProps {
+  title: string
+  onPress?: () => void
+}
