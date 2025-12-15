@@ -73,7 +73,7 @@ export const Selector = ({
 const styles = StyleSheet.create({
   container: {
     zIndex: 10,
-    marginBottom: 12, // Espacio para el siguiente elemento
+    flex: 1
   },
   trigger: {
     flexDirection: 'row',
