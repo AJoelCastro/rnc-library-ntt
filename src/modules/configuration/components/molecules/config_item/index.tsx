@@ -60,7 +60,8 @@ export const ConfigItem: React.FC<ConfigItemProps> = ({
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#fff',
+    borderBottomWidth: 1,
+    borderBottomColor: '#c6c6c6ff',
   },
   content: {
     flexDirection: 'row',
