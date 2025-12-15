@@ -1,24 +1,39 @@
 import type { ButtonProps } from '../../../interfaces'
 import { TouchableOpacity, Text, StyleSheet } from 'react-native'
 
+export const Button = ({
+  item,
+  title,
+  onPress,
+  type = 'primary',
+  disabled,
+  backgroundColor,
+  textColor,
+}: ButtonProps) => {
+  const buttonTitle = title || item?.title || 'Buscar'
+  const buttonType = type || item?.type || 'primary'
+  const handlePress = onPress || item?.onClick
 
+  const bgColor =
+    backgroundColor ??
+    (buttonType === 'primary' ? '#4c00ffff' : '#FFFFFF')
 
-export const Button = ({ item, title, onPress, type = 'primary', disabled }: ButtonProps) => {
-    const buttonTitle = title || item?.title || 'Buscar'
-    const buttonType = type || item?.type || 'primary'
-    const handlePress = onPress || item?.onClick
+  const color =
+    textColor ??
+    (buttonType === 'primary' ? '#FFFFFF' : '#000000')
 
-    return (
-        <TouchableOpacity
-            style={[styles.container, {backgroundColor: buttonType === 'primary' ? '#4c00ffff' : '#FFFFFF'}]}
-            onPress={handlePress}
-            activeOpacity={0.7}
-            disabled={disabled}
-        >
-            <Text style={[styles.text,{color: buttonType === 'primary' ? '#FFFFFF' : '#000000'}]}>{buttonTitle}</Text>
-        </TouchableOpacity>
-    )
+  return (
+    <TouchableOpacity
+      style={[styles.container, { backgroundColor: bgColor }]}
+      onPress={handlePress}
+      activeOpacity={0.7}
+      disabled={disabled}
+    >
+      <Text style={[styles.text, { color }]}>{buttonTitle}</Text>
+    </TouchableOpacity>
+  )
 }
+
 const styles = StyleSheet.create({
     container: {
         width:'100%',

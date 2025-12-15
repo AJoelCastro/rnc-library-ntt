@@ -20,6 +20,8 @@ export interface ButtonProps  {
     onPress?: () => void;
     type?: 'primary' | 'secondary';
     disabled?: boolean
+    backgroundColor?: string
+    textColor?: string
 }
 
 export interface ModalProps {
