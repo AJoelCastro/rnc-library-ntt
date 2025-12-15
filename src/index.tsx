@@ -1,6 +1,6 @@
 import RncLibraryNtt, { type DeviceInfo } from './NativeRncLibraryNtt';
 import { Button, type ButtonType, ModalComponent, InputPassword, Header, Selector, InputEmail, InputWithDelete } from './modules/shared';
-import { TransactionItem, type Transaction, TransactionHeader, TransactionsList, Card } from './modules/transaction';
+import { TransactionItem, type Transaction, TransactionHeader, TransactionsList, Card, ServiceItem } from './modules/transaction';
 import { ConfigItem } from './modules/configuration';
 import { ChatSession } from './modules/chat';
 import { ConnectionBadge, NetworkStatusCard, useNetworkMonitor, type ConnectionInfo } from './modules/network_monitor';
@@ -33,5 +33,6 @@ export {
   NetworkStatusCard,
   useNetworkMonitor,
   type ConnectionInfo,
-  SecureStorage
+  SecureStorage,
+  ServiceItem
 }
