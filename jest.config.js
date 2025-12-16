@@ -3,6 +3,7 @@ module.exports = {
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
     moduleNameMapper: {
         '^@/(.*)$': '<rootDir>/src/$1',
+        '^@/src/(.*)$': '<rootDir>/src/$1',
     },
     transformIgnorePatterns: [
         'node_modules/(?!(jest-)?react-native|@react-native|@react-native-community|@react-navigation)',
