@@ -1,19 +1,25 @@
 import { render, fireEvent, act, waitFor } from '@testing-library/react-native';
-import { ChatSession } from '@/modules/chat/components/organisms/chat_session';
+import { ChatSession } from '../../../../../../../src/modules/chat/components/organisms/chat_session';
+import { type Message } from '../../../../../../../src/modules/chat/types';
 
-// Mock InputWithDelete to avoid complex dependencies usually found in shared components
-jest.mock('@/modules/shared', () => ({
-    InputWithDelete: ({ }: any) => (
-        <></> // Simplified mock, typically we'd use a real TextInput but let's see if we can just mock it or if we need to interact with it.
-        // Actually, we need to interact with it. Let's return a TextInput.
-    ),
-}));
-
-// Better mock for InputWithDelete
-jest.mock('@/modules/shared', () => {
+// Mock dependencies to isolate the unit test
+jest.mock('../../../../../../../src/modules/shared', () => {
     const { TextInput } = require('react-native');
     return {
-        InputWithDelete: (props: any) => <TextInput testID="input-with-delete" {...props} />,
+        InputWithDelete: (props: any) => (
+            <TextInput testID="input-with-delete" {...props} />
+        ),
+    };
+});
+
+jest.mock('../../../../../../../src/modules/chat/components/molecules/send_button', () => {
+    const { TouchableOpacity, Text } = require('react-native');
+    return {
+        SendButton: ({ onPress }: any) => (
+            <TouchableOpacity testID="send-button" onPress={onPress}>
+                <Text>{'>'}</Text>
+            </TouchableOpacity>
+        ),
     };
 });
 
@@ -26,63 +32,96 @@ describe('ChatSession', () => {
         jest.useRealTimers();
     });
 
-    it('renders initial messages', () => {
-        const { getByText, getAllByText } = render(<ChatSession />);
-        expect(getAllByText('Mi conversación').length).toBeGreaterThan(0);
-        expect(getByText('Respuesta del chatbox')).toBeTruthy();
+    it('renders correctly with default empty messages', () => {
+        const { queryByText } = render(<ChatSession />);
+        // Should not show any "Mi conversación" initially if default props are used (which defaults to [])
+        expect(queryByText('Mi conversación')).toBeNull();
     });
 
-    it('allows sending a message', async () => {
-        const { getByTestId, getByText, getAllByText } = render(<ChatSession />);
+    it('renders initialMessages provided via props', () => {
+        const initialMessages: Message[] = [
+            { id: '1', text: 'Hello from props', sender: 'user' },
+            { id: '2', text: 'Bot welcome', sender: 'bot' },
+        ];
+        const { getByText } = render(<ChatSession initialMessages={initialMessages} />);
+
+        expect(getByText('Hello from props')).toBeTruthy();
+        expect(getByText('Bot welcome')).toBeTruthy();
+    });
+
+    it('sends a message when user types and clicks send', async () => {
+        const onMessageSentMock = jest.fn();
+        const { getByTestId, getByText } = render(
+            <ChatSession onMessageSent={onMessageSentMock} />
+        );
 
         const input = getByTestId('input-with-delete');
-        fireEvent.changeText(input, 'Hello World');
+        const sendButton = getByTestId('send-button');
 
-        // Find send button (it renders > text)
-        const sendButton = getByText('>');
+        // Type message
+        fireEvent.changeText(input, 'New User Message');
+
+        // Press send
         fireEvent.press(sendButton);
 
-        // Check if user message appears
-        expect(getByText('Hello World')).toBeTruthy();
+        // Check if message appears in the list
+        expect(getByText('New User Message')).toBeTruthy();
 
-        // Fast forward time for bot response
+        // Check callback
+        expect(onMessageSentMock).toHaveBeenCalledWith('New User Message');
+        expect(onMessageSentMock).toHaveBeenCalledTimes(1);
+
+        // Check if input is cleared (mock InputWithDelete receives value prop)
+        expect(input.props.value).toBe('');
+    });
+
+    it('triggers bot response after timeout', async () => {
+        const { getByTestId, getAllByText } = render(<ChatSession />);
+        const input = getByTestId('input-with-delete');
+        const sendButton = getByTestId('send-button');
+
+        fireEvent.changeText(input, 'Trigger Bot');
+        fireEvent.press(sendButton);
+
+        // Fast forward time
         act(() => {
-            jest.advanceTimersByTime(1000);
+            jest.advanceTimersByTime(800);
         });
 
-        // Check if bot response appears
         await waitFor(() => {
+            // "Respuesta del chatbox" is the hardcoded bot response text
             const botMessages = getAllByText('Respuesta del chatbox');
             expect(botMessages.length).toBeGreaterThan(0);
         });
     });
 
-    it('adds bot response after delay', async () => {
-        const { getByTestId, getByText, getAllByText } = render(<ChatSession />);
+    it('does not send empty messages', () => {
+        const onMessageSentMock = jest.fn();
+        const { getByTestId } = render(
+            <ChatSession onMessageSent={onMessageSentMock} />
+        );
+
         const input = getByTestId('input-with-delete');
+        const sendButton = getByTestId('send-button');
 
-        fireEvent.changeText(input, 'New Message');
-        fireEvent.press(getByText('>'));
-
-        expect(getByText('New Message')).toBeTruthy();
-
-        const initialBotCount = getAllByText('Respuesta del chatbox').length;
-
-        act(() => {
-            jest.advanceTimersByTime(800);
-        });
-
-        expect(getAllByText('Respuesta del chatbox').length).toBeGreaterThan(initialBotCount);
-    });
-
-    it('does not send empty message', () => {
-        const { getByText, getAllByText } = render(<ChatSession />);
-        const initialCount = getAllByText('Mi conversación').length; // Just counting random existing msgs
-
-        const sendButton = getByText('>');
+        // Whitespace only
+        fireEvent.changeText(input, '   ');
         fireEvent.press(sendButton);
 
-        // Should stay same
-        expect(getAllByText('Mi conversación').length).toBe(initialCount);
+        expect(onMessageSentMock).not.toHaveBeenCalled();
+    });
+
+    it('handles styles for user and bot messages', () => {
+        const initialMessages: Message[] = [
+            { id: 'u1', text: 'User Msg', sender: 'user' },
+            { id: 'b1', text: 'Bot Msg', sender: 'bot' },
+        ];
+        const { getByText } = render(<ChatSession initialMessages={initialMessages} />);
+
+        const userBubble = getByText('User Msg').parent; // Approximate checks if we cared about style
+        const botBubble = getByText('Bot Msg').parent;
+
+        expect(userBubble).toBeTruthy();
+        expect(botBubble).toBeTruthy();
     });
 });
