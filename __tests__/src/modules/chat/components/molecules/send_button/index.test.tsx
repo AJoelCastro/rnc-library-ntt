@@ -1,0 +1,18 @@
+import React from 'react';
+import { render, fireEvent } from '@testing-library/react-native';
+import { SendButton } from '@/modules/chat/components/molecules/send_button';
+
+describe('SendButton', () => {
+    it('renders correctly', () => {
+        const { getByText } = render(<SendButton onPress={() => { }} />);
+        expect(getByText('>')).toBeTruthy();
+    });
+
+    it('calls onPress when pressed', () => {
+        const onPressMock = jest.fn();
+        const { getByText } = render(<SendButton onPress={onPressMock} />);
+
+        fireEvent.press(getByText('>'));
+        expect(onPressMock).toHaveBeenCalledTimes(1);
+    });
+});

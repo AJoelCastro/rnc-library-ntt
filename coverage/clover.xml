@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1765892825502" clover="3.2.0">
+  <project timestamp="1765892825502" name="All files">
+    <metrics statements="168" coveredstatements="164" conditionals="143" coveredconditionals="118" methods="56" coveredmethods="55" elements="367" coveredelements="337" complexity="0" loc="168" ncloc="168" packages="33" files="38" classes="38"/>
+    <package name="src">
+      <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="NativeNetworkMonitor.ts" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/NativeNetworkMonitor.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="NativeRncLibraryNtt.ts" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/NativeRncLibraryNtt.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="NativeSecureStorage.ts" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/NativeSecureStorage.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="index.tsx" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/index.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.modules.chat">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/chat/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.modules.chat.components.molecules.send_button">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/chat/components/molecules/send_button/index.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="12" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.modules.chat.components.organisms.chat_session">
+      <metrics statements="21" coveredstatements="21" conditionals="10" coveredconditionals="9" methods="8" coveredmethods="8"/>
+      <file name="index.tsx" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/chat/components/organisms/chat_session/index.tsx">
+        <metrics statements="21" coveredstatements="21" conditionals="10" coveredconditionals="9" methods="8" coveredmethods="8"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="10" type="stmt"/>
+        <line num="24" count="10" type="stmt"/>
+        <line num="25" count="10" type="stmt"/>
+        <line num="27" count="10" type="stmt"/>
+        <line num="28" count="8" type="stmt"/>
+        <line num="31" count="10" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+        <line num="33" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
+        <line num="44" count="2" type="stmt"/>
+        <line num="49" count="2" type="stmt"/>
+        <line num="53" count="10" type="stmt"/>
+        <line num="54" count="56" type="stmt"/>
+        <line num="55" count="56" type="stmt"/>
+        <line num="66" count="10" type="stmt"/>
+        <line num="75" count="78" type="stmt"/>
+        <line num="93" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.modules.chat.interfaces">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/chat/interfaces/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.modules.chat.types">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/chat/types/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.modules.configuration">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/configuration/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.modules.configuration.components.molecules.config_item">
+      <metrics statements="5" coveredstatements="5" conditionals="21" coveredconditionals="19" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/configuration/components/molecules/config_item/index.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="21" coveredconditionals="19" methods="1" coveredmethods="1"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="25" count="6" type="cond" truecount="4" falsecount="0"/>
+        <line num="27" count="6" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.modules.configuration.interfaces">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/configuration/interfaces/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.modules.network_monitor">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/network_monitor/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.modules.network_monitor.components.atoms">
+      <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+      <file name="ConnectionBadge.tsx" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/network_monitor/components/atoms/ConnectionBadge.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="6" type="cond" truecount="4" falsecount="0"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.modules.network_monitor.components.molecules">
+      <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="NetworkStatusCard.tsx" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/network_monitor/components/molecules/NetworkStatusCard.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.modules.network_monitor.hooks">
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="useNetworkMonitor.ts" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/network_monitor/hooks/useNetworkMonitor.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.modules.network_monitor.interfaces">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/network_monitor/interfaces/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.modules.network_monitor.types">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/network_monitor/types/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.modules.secure_storage">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/secure_storage/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.modules.secure_storage.store">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="SecureStorage.ts" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/secure_storage/store/SecureStorage.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.modules.shared">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/shared/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.modules.shared.components.atoms.button">
+      <metrics statements="8" coveredstatements="8" conditionals="17" coveredconditionals="10" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/shared/components/atoms/button/index.tsx">
+        <metrics statements="8" coveredstatements="8" conditionals="17" coveredconditionals="10" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="13" count="3" type="cond" truecount="1" falsecount="2"/>
+        <line num="14" count="3" type="cond" truecount="1" falsecount="2"/>
+        <line num="15" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="18" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.modules.shared.components.atoms.modal">
+      <metrics statements="11" coveredstatements="9" conditionals="18" coveredconditionals="12" methods="3" coveredmethods="3"/>
+      <file name="index.tsx" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/shared/components/atoms/modal/index.tsx">
+        <metrics statements="11" coveredstatements="9" conditionals="18" coveredconditionals="12" methods="3" coveredmethods="3"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="14" count="3" type="cond" truecount="2" falsecount="2"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="67" count="1" type="stmt"/>
+        <line num="68" count="1" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.modules.shared.components.molecules.email">
+      <metrics statements="15" coveredstatements="15" conditionals="7" coveredconditionals="6" methods="4" coveredmethods="4"/>
+      <file name="index.tsx" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/shared/components/molecules/email/index.tsx">
+        <metrics statements="15" coveredstatements="15" conditionals="7" coveredconditionals="6" methods="4" coveredmethods="4"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="7" type="stmt"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="27" count="4" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="32" count="4" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.modules.shared.components.molecules.header">
+      <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/shared/components/molecules/header/index.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.modules.shared.components.molecules.input_with_delete">
+      <metrics statements="12" coveredstatements="12" conditionals="5" coveredconditionals="5" methods="4" coveredmethods="4"/>
+      <file name="index.tsx" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/shared/components/molecules/input_with_delete/index.tsx">
+        <metrics statements="12" coveredstatements="12" conditionals="5" coveredconditionals="5" methods="4" coveredmethods="4"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="27" count="5" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.modules.shared.components.molecules.password">
+      <metrics statements="5" coveredstatements="5" conditionals="5" coveredconditionals="5" methods="2" coveredmethods="2"/>
+      <file name="index.tsx" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/shared/components/molecules/password/index.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="5" coveredconditionals="5" methods="2" coveredmethods="2"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.modules.shared.components.molecules.selector">
+      <metrics statements="15" coveredstatements="15" conditionals="16" coveredconditionals="13" methods="7" coveredmethods="7"/>
+      <file name="index.tsx" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/shared/components/molecules/selector/index.tsx">
+        <metrics statements="15" coveredstatements="15" conditionals="16" coveredconditionals="13" methods="7" coveredmethods="7"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="20" count="2" type="cond" truecount="3" falsecount="1"/>
+        <line num="23" count="5" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="46" count="3" type="stmt"/>
+        <line num="48" count="2" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="73" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.modules.shared.interfaces">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/shared/interfaces/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.modules.shared.types">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.tsx" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/shared/types/index.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.modules.transaction">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/transaction/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.modules.transaction.components.molecules.card">
+      <metrics statements="9" coveredstatements="9" conditionals="10" coveredconditionals="8" methods="2" coveredmethods="2"/>
+      <file name="index.tsx" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/transaction/components/molecules/card/index.tsx">
+        <metrics statements="9" coveredstatements="9" conditionals="10" coveredconditionals="8" methods="2" coveredmethods="2"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="32" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="33" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="47" count="2" type="stmt"/>
+        <line num="49" count="2" type="stmt"/>
+        <line num="77" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.modules.transaction.components.molecules.service_item">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/transaction/components/molecules/service_item/index.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.modules.transaction.components.organisms">
+      <metrics statements="38" coveredstatements="38" conditionals="24" coveredconditionals="21" methods="13" coveredmethods="13"/>
+      <file name="TransactionHeader.tsx" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/transaction/components/organisms/TransactionHeader.tsx">
+        <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="32" count="8" type="cond" truecount="4" falsecount="0"/>
+        <line num="34" count="8" type="stmt"/>
+        <line num="35" count="86" type="stmt"/>
+        <line num="36" count="40" type="stmt"/>
+        <line num="38" count="8" type="stmt"/>
+        <line num="39" count="86" type="stmt"/>
+        <line num="40" count="46" type="stmt"/>
+        <line num="42" count="8" type="stmt"/>
+        <line num="69" count="2" type="stmt"/>
+      </file>
+      <file name="TransactionItem.tsx" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/transaction/components/organisms/TransactionItem.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="53" type="stmt"/>
+        <line num="15" count="53" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="53" type="stmt"/>
+        <line num="19" count="53" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="53" type="stmt"/>
+        <line num="50" count="2" type="stmt"/>
+      </file>
+      <file name="TransactionList.tsx" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/transaction/components/organisms/TransactionList.tsx">
+        <metrics statements="20" coveredstatements="20" conditionals="12" coveredconditionals="9" methods="7" coveredmethods="7"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="154" count="1" type="stmt"/>
+        <line num="155" count="6" type="stmt"/>
+        <line num="156" count="6" type="stmt"/>
+        <line num="157" count="6" type="cond" truecount="3" falsecount="1"/>
+        <line num="159" count="6" type="stmt"/>
+        <line num="160" count="1" type="stmt"/>
+        <line num="161" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="162" count="1" type="stmt"/>
+        <line num="165" count="6" type="stmt"/>
+        <line num="166" count="1" type="stmt"/>
+        <line num="167" count="1" type="stmt"/>
+        <line num="168" count="1" type="cond" truecount="3" falsecount="1"/>
+        <line num="169" count="1" type="stmt"/>
+        <line num="173" count="6" type="stmt"/>
+        <line num="174" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="181" count="6" type="stmt"/>
+        <line num="187" count="68" type="stmt"/>
+        <line num="188" count="50" type="stmt"/>
+        <line num="201" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.modules.transaction.interfaces">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/transaction/interfaces/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.modules.transaction.types">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/acastrre/Trabajo/rnc-library-ntt/src/modules/transaction/types/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+  </project>
+</coverage>
