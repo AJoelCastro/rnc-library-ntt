@@ -3,7 +3,7 @@ import { useNetworkMonitor } from '@/modules/network_monitor/hooks/useNetworkMon
 import NativeNetworkMonitor from '@/src/NativeNetworkMonitor';
 
 // Mock the native module
-jest.mock('@/NativeNetworkMonitor', () => ({
+jest.mock('@/src/NativeNetworkMonitor', () => ({
     getCurrentState: jest.fn(),
     addListener: jest.fn(),
     removeAllListeners: jest.fn(),
