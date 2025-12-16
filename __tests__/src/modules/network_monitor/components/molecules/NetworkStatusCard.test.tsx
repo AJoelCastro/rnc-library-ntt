@@ -1,4 +1,3 @@
-import React from 'react';
 import { render } from '@testing-library/react-native';
 import { NetworkStatusCard } from '@/modules/network_monitor/components/molecules/NetworkStatusCard';
 

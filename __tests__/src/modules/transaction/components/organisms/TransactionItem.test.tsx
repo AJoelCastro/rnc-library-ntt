@@ -1,4 +1,3 @@
-import React from 'react';
 import { render } from '@testing-library/react-native';
 import { TransactionItem } from '@/modules/transaction/components/organisms/TransactionItem';
 import type { Transaction } from '@/modules/transaction/interfaces';

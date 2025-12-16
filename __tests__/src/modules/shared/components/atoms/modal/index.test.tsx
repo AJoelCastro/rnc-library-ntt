@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
 import { ModalComponent } from '@/modules/shared/components/atoms/modal';
 

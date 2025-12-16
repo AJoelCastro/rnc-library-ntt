@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
 import { SendButton } from '@/modules/chat/components/molecules/send_button';
 

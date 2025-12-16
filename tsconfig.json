@@ -2,17 +2,30 @@
   "compilerOptions": {
     "rootDir": ".",
     "paths": {
-      "@arturocastro/react-native-rnc-library-ntt": ["./src/index"],
-      "@/modules/*": ["./src/modules/*"],
-      "@/shared/*": ["./src/modules/shared/*"]
+      "@arturocastro/react-native-rnc-library-ntt": [
+        "./src/index"
+      ],
+      "@/modules/*": [
+        "./src/modules/*"
+      ],
+      "@/shared/*": [
+        "./src/modules/shared/*"
+      ],
+      "@/src/*": [
+        "./src/*"
+      ]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
-    "customConditions": ["react-native-strict-api"],
+    "customConditions": [
+      "react-native-strict-api"
+    ],
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react-jsx",
-    "lib": ["ESNext"],
+    "lib": [
+      "ESNext"
+    ],
     "module": "ESNext",
     "moduleResolution": "bundler",
     "noEmit": true,
