@@ -1,10 +1,9 @@
-import React from 'react';
 import { render, fireEvent, act, waitFor } from '@testing-library/react-native';
 import { ChatSession } from '@/modules/chat/components/organisms/chat_session';
 
 // Mock InputWithDelete to avoid complex dependencies usually found in shared components
 jest.mock('@/modules/shared', () => ({
-    InputWithDelete: ({ value, onChangeText, placeholder }: any) => (
+    InputWithDelete: ({ }: any) => (
         <></> // Simplified mock, typically we'd use a real TextInput but let's see if we can just mock it or if we need to interact with it.
         // Actually, we need to interact with it. Let's return a TextInput.
     ),

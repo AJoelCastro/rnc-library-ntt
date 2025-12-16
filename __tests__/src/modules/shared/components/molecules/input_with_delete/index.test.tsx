@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
 import { InputWithDelete } from '@/modules/shared/components/molecules/input_with_delete';
 
@@ -18,7 +17,7 @@ describe('InputWithDelete', () => {
 
     it('clears text when delete button is pressed', () => {
         const onChangeText = jest.fn();
-        const { getByText, getByDisplayValue } = render(<InputWithDelete value="Some text" onChangeText={onChangeText} />);
+        const { getByText } = render(<InputWithDelete value="Some text" onChangeText={onChangeText} />);
 
         // Delete button (X) should be visible
         const deleteButton = getByText('✕');

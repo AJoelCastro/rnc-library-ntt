@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
 import { Text } from 'react-native';
 import { ConfigItem } from '@/modules/configuration/components/molecules/config_item';
@@ -34,7 +33,7 @@ describe('ConfigItem', () => {
 
     it('disables interaction when disabled prop is true', () => {
         const onPressMock = jest.fn();
-        const { getByText } = render(<ConfigItem onPress={onPressMock} disabled={true} />);
+        const { } = render(<ConfigItem onPress={onPressMock} disabled={true} />);
 
         // Attempting to press the text or container usually works regardless of disabled in RNTL,
         // but we can check if the accessibilityState is disabled

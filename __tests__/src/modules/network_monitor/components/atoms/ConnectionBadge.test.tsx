@@ -1,10 +1,9 @@
-import React from 'react';
 import { render } from '@testing-library/react-native';
 import { ConnectionBadge } from '@/modules/network_monitor/components/atoms/ConnectionBadge';
 
 describe('ConnectionBadge', () => {
     it('renders wifi connected state correctly', () => {
-        const { getByText, getByRole } = render(
+        const { getByText } = render(
             <ConnectionBadge type="wifi" isConnected={true} />
         );
         expect(getByText('WIFI')).toBeTruthy();
