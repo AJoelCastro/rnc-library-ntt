@@ -12,13 +12,14 @@ import { InputWithDelete } from '../../../../shared'
 import { SendButton } from '../../molecules/send_button'
 
 type Props = {
-  initialMessages?: Message[]
+  messages: Message[]
+  setMessages: React.Dispatch<React.SetStateAction<Message[]>>
   onMessageSent?: (text: string) => void
 }
 
-export const ChatSession = ({ initialMessages = [], onMessageSent }: Props) => {
-  const [messages, setMessages] = useState<Message[]>(initialMessages)
-  const [input, setInput] = useState<string>('')
+
+export const ChatSession = ({ messages, setMessages, onMessageSent }: Props) => {
+  const [input, setInput] = useState('')
   const flatListRef = useRef<FlatList<Message> | null>(null)
 
   useEffect(() => {
@@ -34,17 +35,20 @@ export const ChatSession = ({ initialMessages = [], onMessageSent }: Props) => {
       text: trimmed,
       sender: 'user',
     }
-    if (onMessageSent) onMessageSent(trimmed)
+
     setMessages(prev => [...prev, newMsg])
+    onMessageSent?.(trimmed)
     setInput('')
 
     setTimeout(() => {
-      const botMsg: Message = {
-        id: (Date.now() + 1).toString(),
-        text: 'Respuesta del chatbox',
-        sender: 'bot',
-      }
-      setMessages(prev => [...prev, botMsg])
+      setMessages(prev => [
+        ...prev,
+        {
+          id: (Date.now() + 1).toString(),
+          text: 'Respuesta del chatbox',
+          sender: 'bot',
+        },
+      ])
     }, 700)
   }
 
