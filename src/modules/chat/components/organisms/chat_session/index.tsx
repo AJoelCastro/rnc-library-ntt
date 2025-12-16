@@ -11,16 +11,13 @@ import type { Message } from '../../../types'
 import { InputWithDelete } from '../../../../shared'
 import { SendButton } from '../../molecules/send_button'
 
-// type Props = {}
+type Props = {
+  initialMessages?: Message[]
+  onMessageSent?: (text: string) => void
+}
 
-export const ChatSession = () => {
-  const [messages, setMessages] = useState<Message[]>([
-    { id: '1', text: 'Mi conversación', sender: 'user' },
-    { id: '2', text: 'Mi conversación', sender: 'user' },
-    { id: '3', text: 'Mi conversación', sender: 'user' },
-    { id: '4', text: 'Respuesta del chatbox', sender: 'bot' },
-    { id: '5', text: 'Mi conversación', sender: 'user' },
-  ])
+export const ChatSession = ({ initialMessages = [], onMessageSent }: Props) => {
+  const [messages, setMessages] = useState<Message[]>(initialMessages)
   const [input, setInput] = useState<string>('')
   const flatListRef = useRef<FlatList<Message> | null>(null)
 
@@ -37,6 +34,7 @@ export const ChatSession = () => {
       text: trimmed,
       sender: 'user',
     }
+    if (onMessageSent) onMessageSent(trimmed)
     setMessages(prev => [...prev, newMsg])
     setInput('')
 
