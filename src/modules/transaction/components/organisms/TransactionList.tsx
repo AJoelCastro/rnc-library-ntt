@@ -154,19 +154,19 @@ const defaultTransactions: Transaction[] = [
 export const TransactionsList = ({ transactions }: TransactionHeaderListProps) => {
   const [onEndReachedCalled, setOnEndReachedCalled] = useState(false);
   const [isRefreshing, setIsRefreshing] = useState(false);
-  const [tx, setTx] = useState<Transaction[]>(transactions && transactions.length ? transactions.slice(0,15) : defaultTransactions.slice(0,15));
-  
+  const [tx, setTx] = useState<Transaction[]>(transactions && transactions.length ? transactions.slice(0, 15) : defaultTransactions.slice(0, 15));
+
   const handleRefresh = async () => {
-    setIsRefreshing(true); 
+    setIsRefreshing(true);
     setTx(transactions ? transactions.slice(0, 15) : defaultTransactions.slice(0, 15));
-    setIsRefreshing(false); 
+    setIsRefreshing(false);
   };
-  
+
   const handleOnEndReached = () => {
     setOnEndReachedCalled(true);
     setTimeout(() => {
-      setTx(transactions && transactions.length ? transactions.slice(0,tx.length + 5) : defaultTransactions.slice(0,tx.length + 5))
-    setOnEndReachedCalled(false);
+      setTx(transactions && transactions.length ? transactions.slice(0, tx.length + 5) : defaultTransactions.slice(0, tx.length + 5))
+      setOnEndReachedCalled(false);
     }, 1000);
   }
 
@@ -177,11 +177,12 @@ export const TransactionsList = ({ transactions }: TransactionHeaderListProps) =
       </View>
     ) : null;
   }
-  
+
   return (
     <View style={styles.container}>
       <TransactionHeader transactions={tx} />
       <FlatList
+        testID="transactions-list"
         data={tx}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => <TransactionItem item={item} />}

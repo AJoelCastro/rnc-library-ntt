@@ -7,7 +7,7 @@ import {
   KeyboardAvoidingView,
   Platform,
 } from 'react-native'
-import type { Message } from '@/modules/chat/types'
+import type { Message } from '../../../types'
 import { InputWithDelete } from '../../../../shared'
 import { SendButton } from '../../molecules/send_button'
 
@@ -80,9 +80,9 @@ export const ChatSession = () => {
 
       <View style={styles.inputRow}>
         <InputWithDelete
-        value={input}
-        onChangeText={setInput}
-        placeholder="Escribe aqui"
+          value={input}
+          onChangeText={setInput}
+          placeholder="Escribe aqui"
         />
         <SendButton onPress={handleSend} />
       </View>

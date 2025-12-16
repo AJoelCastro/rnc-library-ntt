@@ -13,8 +13,8 @@ import {
 const DEFAULT_ICON_SIZE = 24
 
 export const ConfigItem: React.FC<ConfigItemProps> = ({
-  title="Configuración",
-  subtitle="Este es un subtítulo de ejemplo",
+  title = "Configuración",
+  subtitle = "Este es un subtítulo de ejemplo",
   onPress,
   Icon,
   iconSize = DEFAULT_ICON_SIZE,
@@ -27,13 +27,13 @@ export const ConfigItem: React.FC<ConfigItemProps> = ({
   return (
     <Container
       activeOpacity={0.7}
-      onPress={onPress}
+      onPress={disabled ? undefined : onPress}
       style={[styles.container, style]}
-      accessibilityRole={onPress ? 'button' : undefined}
+      accessibilityRole={onPress && !disabled ? 'button' : undefined}
       disabled={disabled}
     >
       <View style={styles.content}>
-        <View style={[styles.iconWrap]}> 
+        <View style={[styles.iconWrap]}>
           {Icon ? (
             Icon
           ) : (
