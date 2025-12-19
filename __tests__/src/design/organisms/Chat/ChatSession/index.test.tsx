@@ -3,7 +3,7 @@ import { ChatSession } from '@/src/design/organisms/Chat/ChatSession';
 import { type Message } from '@/src/types';
 
 // Mock dependencies
-jest.mock('@/src/modules/shared', () => {
+jest.mock('../../../../../../src/design/molecules/Shared/InputWithDelete', () => {
     const { TextInput } = require('react-native');
     return {
         InputWithDelete: (props: any) => (
@@ -12,7 +12,7 @@ jest.mock('@/src/modules/shared', () => {
     };
 });
 
-jest.mock('@/src/modules/chat/components/molecules/send_button', () => {
+jest.mock('../../../../../../src/design/atoms/Chat/SendButton', () => {
     const { TouchableOpacity, Text } = require('react-native');
     return {
         SendButton: ({ onPress }: any) => (
