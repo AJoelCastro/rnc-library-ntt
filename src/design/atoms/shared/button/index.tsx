@@ -1,4 +1,4 @@
-import type { ButtonProps } from '../../../interfaces'
+import type { ButtonProps } from '../../../../interfaces'
 import { TouchableOpacity, Text, StyleSheet } from 'react-native'
 
 export const Button = ({
@@ -35,16 +35,16 @@ export const Button = ({
 }
 
 const styles = StyleSheet.create({
-    container: {
-        width:'100%',
-        paddingVertical: 12,
-        paddingHorizontal: 24,
-        borderRadius: 8,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    text: {
-        fontSize: 16,
-        fontWeight: '500',
-    },
+  container: {
+    width: '100%',
+    paddingVertical: 12,
+    paddingHorizontal: 24,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  text: {
+    fontSize: 16,
+    fontWeight: '500',
+  },
 })

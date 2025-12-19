@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { ConnectionBadge } from '../atoms/ConnectionBadge';
-import type { ConnectionInfo } from '../../../modules/network_monitor/types';
+import { ConnectionBadge } from '../../atoms/NetworkMonitor/ConnectionBadge';
+import type { ConnectionInfo } from '../../../types';
 
 interface Props {
   connectionInfo: ConnectionInfo;

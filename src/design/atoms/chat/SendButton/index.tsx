@@ -1,5 +1,5 @@
 import { TouchableOpacity, Text, StyleSheet } from 'react-native'
-import type { SendButtonProps } from '@/src/interfaces'
+import type { SendButtonProps } from '../../../../interfaces'
 
 export const SendButton = ({ onPress }: SendButtonProps) => {
   return (

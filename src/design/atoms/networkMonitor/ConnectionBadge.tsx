@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import type { ConnectionBadgeProps } from '../../interfaces';
+import type { ConnectionBadgeProps } from '../../../interfaces';
 
 
 export const ConnectionBadge: React.FC<ConnectionBadgeProps> = ({ type, isConnected }) => {

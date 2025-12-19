@@ -1,4 +1,4 @@
-import type { ConfigItemProps } from '../../../interfaces'
+import type { ConfigItemProps } from '../../../../interfaces'
 import React from 'react'
 import {
   View,

@@ -1,4 +1,4 @@
-import type { ModalProps } from '../../../interfaces'
+import type { ModalProps } from '../../../../interfaces'
 import { View, Text, Modal, TouchableOpacity, StyleSheet } from 'react-native'
 
 export const ModalComponent = ({
