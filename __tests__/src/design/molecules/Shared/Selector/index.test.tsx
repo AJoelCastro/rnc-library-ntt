@@ -1,5 +1,5 @@
 import { render, fireEvent } from '@testing-library/react-native';
-import { Selector } from '../../../../../../src/design/molecules/Shared/Selector';
+import { Selector } from '@/src/design/molecules/Shared/Selector';
 
 describe('Selector', () => {
     it('renders placeholder initially', () => {

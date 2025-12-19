@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react-native';
-import { TransactionItem } from '../../../../../src/design/organisms/Transaction/TransactionItem';
-import type { Transaction } from '../../../../../src/interfaces';
+import { TransactionItem } from '@/src/design/organisms/Transaction/TransactionItem';
+import type { Transaction } from '@/src/interfaces';
 
 describe('TransactionItem', () => {
     it('renders income transaction', () => {

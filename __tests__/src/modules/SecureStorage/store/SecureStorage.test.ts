@@ -1,7 +1,7 @@
 import { SecureStorage } from '@/modules/SecureStorage/store/SecureStorage';
-import NativeSecureStorage from '../../../../../src/NativeSecureStorage';
+import NativeSecureStorage from '@/src/NativeSecureStorage';
 
-jest.mock('../../../../../src/NativeSecureStorage', () => ({
+jest.mock('@/src/NativeSecureStorage', () => ({
     setItem: jest.fn(),
     getItem: jest.fn(),
 }));

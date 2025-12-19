@@ -1,5 +1,5 @@
 import { render, fireEvent } from '@testing-library/react-native';
-import { ServiceItem } from '../../../../../../src/design/molecules/Transaction/ServiceItem';
+import { ServiceItem } from '@/src/design/molecules/Transaction/ServiceItem';
 
 describe('ServiceItem', () => {
     it('renders title', () => {

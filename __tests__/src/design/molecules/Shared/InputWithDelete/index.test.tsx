@@ -1,5 +1,5 @@
 import { render, fireEvent } from '@testing-library/react-native';
-import { InputWithDelete } from '../../../../../../src/design/molecules/Shared/InputWithDelete';
+import { InputWithDelete } from '@/src/design/molecules/Shared/InputWithDelete';
 
 describe('InputWithDelete', () => {
     it('renders with value', () => {

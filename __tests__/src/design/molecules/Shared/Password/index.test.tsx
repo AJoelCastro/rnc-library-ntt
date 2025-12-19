@@ -1,5 +1,5 @@
 import { render, fireEvent } from '@testing-library/react-native';
-import { InputPassword } from '../../../../../../src/design/molecules/Shared/Password';
+import { InputPassword } from '@/src/design/molecules/Shared/Password';
 
 describe('InputPassword', () => {
     it('renders with initial value', () => {
