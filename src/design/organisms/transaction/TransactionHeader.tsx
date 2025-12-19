@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet } from 'react-native';
-import type { Transaction, TransactionHeaderListProps } from '../../interfaces';
+import type { Transaction, TransactionHeaderListProps } from '../../../interfaces';
 
 const defaultTransactions: Transaction[] = [
   {

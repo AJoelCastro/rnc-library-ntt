@@ -1,39 +1,39 @@
 // CHAT
 
-export { ChatSession } from './components/organisms/chat_session'
+export { ChatSession } from './organisms/Chat/ChatSession'
 
 
 // TRANSACTION
 
-export { TransactionItem } from './components/organisms/TransactionItem'
-export { TransactionHeader } from './components/organisms/TransactionHeader'
-export { TransactionsList } from './components/organisms/TransactionList'
-export { Card } from './components/molecules/card'
-export { ServiceItem } from './components/molecules/service_item'
-export type { Transaction, ServiceItemProps } from './interfaces'
+export { TransactionItem } from './organisms/Transaction/TransactionItem'
+export { TransactionHeader } from './organisms/Transaction/TransactionHeader'
+export { TransactionsList } from './organisms/Transaction/TransactionList'
+export { Card } from './molecules/Transaction/Card'
+export { ServiceItem } from './molecules/Transaction/ServiceItem'
+export type { Transaction, ServiceItemProps } from '../interfaces'
 
 
 // SHARED
 
-export { Header } from './components/molecules/header';
-export { InputPassword } from './components/molecules/password';
-export { Button } from './components/atoms/button';
-export { ModalComponent } from './components/atoms/modal';
-export { Selector } from './components/molecules/selector';
-export { InputEmail } from './components/molecules/email';
-export { InputWithDelete } from './components/molecules/input_with_delete';
-export type { DeviceInfo, ButtonType } from './interfaces';
+export { Header } from './molecules/Shared/Header';
+export { InputPassword } from './molecules/Shared/Password';
+export { Button } from './atoms/Shared/Button';
+export { ModalComponent } from './atoms/Shared/Modal';
+export { Selector } from './molecules/Shared/Selector';
+export { InputEmail } from './molecules/Shared/Email';
+export { InputWithDelete } from './molecules/Shared/InputWithDelete';
+export type { DeviceInfo, ButtonType } from '../interfaces';
 
 
 // CONFIGURATION 
 
-export { ConfigItem } from './components/molecules/config_item'
+export { ConfigItem } from './molecules/Configuration/ConfigItem'
 
 
 
 // NETWORK MONITOR
 
-export { ConnectionBadge } from './components/atoms/ConnectionBadge';
-export { NetworkStatusCard } from '../../design/molecules/networkMonitor/NetworkStatusCard';
-export { useNetworkMonitor } from './hooks/useNetworkMonitor';
-export { type ConnectionInfo } from './types';
+export { ConnectionBadge } from './atoms/NetworkMonitor/ConnectionBadge';
+export { NetworkStatusCard } from './molecules/NetworkMonitor/NetworkStatusCard';
+export { useNetworkMonitor } from '../modules/NetworkMonitor/hooks/useNetworkMonitor';
+export { type ConnectionInfo } from '../types';

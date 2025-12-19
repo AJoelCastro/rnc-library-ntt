@@ -1,4 +1,4 @@
-import type { ServiceItemProps } from '../../../interfaces'
+import type { ServiceItemProps } from '../../../../interfaces'
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 
 export const ServiceItem = ({ title, onPress }: ServiceItemProps) => {

@@ -7,9 +7,9 @@ import {
   KeyboardAvoidingView,
   Platform,
 } from 'react-native'
-import type { Message } from '../../../types'
-import { InputWithDelete } from '../../../../shared'
-import { SendButton } from '../../../../../design/atoms/chat/send_button'
+import type { Message } from '../../../../types'
+import { InputWithDelete } from '../../../molecules/Shared/InputWithDelete'
+import { SendButton } from '../../../atoms/Chat/SendButton'
 
 type Props = {
   messages: Message[]

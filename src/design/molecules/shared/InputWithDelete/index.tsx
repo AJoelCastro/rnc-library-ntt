@@ -1,6 +1,6 @@
 import { View, TextInput, TouchableOpacity, StyleSheet, Text } from 'react-native'
 import { useEffect, useState } from 'react'
-import type { InputWithDeleteProps } from '../../../interfaces'
+import type { InputWithDeleteProps } from '../../../../interfaces'
 
 export const InputWithDelete = ({
   value = '',
@@ -22,7 +22,7 @@ export const InputWithDelete = ({
   useEffect(() => {
     setText(value)
   }, [value])
-  
+
 
   return (
     <View style={styles.container}>

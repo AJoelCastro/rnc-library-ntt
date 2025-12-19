@@ -1,4 +1,4 @@
-import { SecureStorage } from '@/modules/secure_storage/store/SecureStorage';
+import { SecureStorage } from '@/modules/SecureStorage/store/SecureStorage';
 import NativeSecureStorage from '../../../../../src/NativeSecureStorage';
 
 jest.mock('../../../../../src/NativeSecureStorage', () => ({

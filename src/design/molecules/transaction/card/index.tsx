@@ -1,30 +1,30 @@
-import type { CardProps } from '../../../interfaces';
-import type { CardType } from '../../../types';
+import type { CardProps } from '../../../../interfaces';
+import type { CardType } from '../../../../types';
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
 
 
 const colorMap: Record<CardType, { bg: string; stripe: string; accent?: string }> = {
-  black: { 
+  black: {
     bg: '#1A1A1A',
     stripe: 'rgba(255,255,255,0.1)',
     accent: '#000000'
   },
-  platinum: { 
-    bg: '#C0C0C0', 
-    stripe: 'rgba(0,0,0,0.1)', 
-    accent: '#A9A9A9' 
+  platinum: {
+    bg: '#C0C0C0',
+    stripe: 'rgba(0,0,0,0.1)',
+    accent: '#A9A9A9'
   },
-  gold: { 
+  gold: {
     bg: '#FFD700',
-    stripe: 'rgba(255,255,255,0.2)', 
+    stripe: 'rgba(255,255,255,0.2)',
     accent: '#DAA520'
   },
-  blue: { 
-    bg: '#007ACC', 
-    stripe: 'rgba(255,255,255,0.1)', 
-    accent: '#005580' 
+  blue: {
+    bg: '#007ACC',
+    stripe: 'rgba(255,255,255,0.1)',
+    accent: '#005580'
   },
 }
 
@@ -48,7 +48,7 @@ export const Card: React.FC<CardProps> = ({
 
   return (
     <View style={[styles.wrapper, style]}>
-      <View style={[styles.card, { backgroundColor: colors.bg }]}> 
+      <View style={[styles.card, { backgroundColor: colors.bg }]}>
         <View style={[styles.stripe, { backgroundColor: colors.stripe }]} />
 
         <View style={styles.topRow}>

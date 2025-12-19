@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, StyleSheet, FlatList } from 'react-native'
 import { useState } from 'react'
-import type { SelectorProps } from '../../../interfaces'
-import type { SelectorItem } from '../../../types'
+import type { SelectorProps } from '../../../../interfaces'
+import type { SelectorItem } from '../../../../types'
 
 
 const defaultItems: SelectorItem[] = [
@@ -35,7 +35,7 @@ export const Selector = ({
       >
         <Text style={styles.triggerText}>{selected?.label || placeholder}</Text>
         {
-          isOpen? <Text>▲</Text> : <Text>▼</Text>
+          isOpen ? <Text>▲</Text> : <Text>▼</Text>
         }
       </TouchableOpacity>
 

@@ -1,6 +1,6 @@
 import { View, TextInput, StyleSheet } from 'react-native'
 import { useEffect, useState } from 'react'
-import type { EmailProps } from '../../../interfaces'
+import type { EmailProps } from '../../../../interfaces'
 
 
 

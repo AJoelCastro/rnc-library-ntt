@@ -1,6 +1,6 @@
 import { View, TextInput, TouchableOpacity, StyleSheet, Text } from 'react-native'
 import { useState } from 'react'
-import type { PasswordProps } from '../../../interfaces'
+import type { PasswordProps } from '../../../../interfaces'
 
 
 

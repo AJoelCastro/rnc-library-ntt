@@ -1,6 +1,6 @@
 import type { TurboModule } from 'react-native';
 import { TurboModuleRegistry } from 'react-native';
-import type { ConnectionInfo } from './modules/network_monitor/types';
+import type { ConnectionInfo } from './modules/NetworkMonitor/types';
 
 export interface Spec extends TurboModule {
   getCurrentState(): Promise<ConnectionInfo>;

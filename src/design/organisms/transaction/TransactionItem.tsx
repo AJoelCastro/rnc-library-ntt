@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet } from 'react-native';
-import type { Transaction, TransactionItemProps } from '../../interfaces';
+import type { Transaction, TransactionItemProps } from '../../../interfaces';
 
 
 export const TransactionItem = ({ item }: TransactionItemProps) => {
@@ -25,14 +25,14 @@ export const TransactionItem = ({ item }: TransactionItemProps) => {
           <Text style={styles.categoryText}>{transaction?.category}</Text>
         </View>
         <View style={{}}>
-            <Text style={styles.description}>{transaction?.description}</Text>
-            <Text style={styles.date}>
+          <Text style={styles.description}>{transaction?.description}</Text>
+          <Text style={styles.date}>
             {new Date(transaction!.date).toLocaleDateString('es-PE', {
-                day: '2-digit',
-                month: 'short',
-                year: 'numeric',
+              day: '2-digit',
+              month: 'short',
+              year: 'numeric',
             })}
-            </Text>
+          </Text>
         </View>
       </View>
       <Text
@@ -59,11 +59,11 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.05,
     shadowRadius: 4,
     elevation: 1,
-    margin:12
+    margin: 12
   },
   leftSection: {
     flex: 1,
-    display: 'flex', 
+    display: 'flex',
     flexDirection: 'row',
     gap: 12
   },

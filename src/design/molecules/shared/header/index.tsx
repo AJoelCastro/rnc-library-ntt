@@ -1,4 +1,4 @@
-import type { HeaderProps } from '../../../interfaces'
+import type { HeaderProps } from '../../../../interfaces'
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 
 
