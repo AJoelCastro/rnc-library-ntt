@@ -1,9 +1,9 @@
 import { renderHook, waitFor } from '@testing-library/react-native';
 import { useNetworkMonitor } from '@/modules/NetworkMonitor/hooks/useNetworkMonitor';
-import NativeNetworkMonitor from '../../../../../src/NativeNetworkMonitor';
+import NativeNetworkMonitor from '@/src/NativeNetworkMonitor';
 
 // Mock the native module
-jest.mock('../../../../../src/NativeNetworkMonitor', () => ({
+jest.mock('@/src/NativeNetworkMonitor', () => ({
     getCurrentState: jest.fn(),
     addListener: jest.fn(),
     removeAllListeners: jest.fn(),

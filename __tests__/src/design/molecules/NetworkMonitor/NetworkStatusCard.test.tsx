@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react-native';
-import { NetworkStatusCard } from '../../../../../src/design/molecules/NetworkMonitor/NetworkStatusCard';
+import { NetworkStatusCard } from '@/src/design/molecules/NetworkMonitor/NetworkStatusCard';
 
 describe('NetworkStatusCard', () => {
     it('renders correctly with connection info', () => {

@@ -1,9 +1,9 @@
 import { render, fireEvent, act, waitFor } from '@testing-library/react-native';
-import { ChatSession } from '../../../../../../src/design/organisms/Chat/ChatSession';
-import { type Message } from '../../../../../../src/types';
+import { ChatSession } from '@/src/design/organisms/Chat/ChatSession';
+import { type Message } from '@/src/types';
 
 // Mock dependencies
-jest.mock('../../../../../../../src/modules/shared', () => {
+jest.mock('@/src/modules/shared', () => {
     const { TextInput } = require('react-native');
     return {
         InputWithDelete: (props: any) => (
@@ -12,7 +12,7 @@ jest.mock('../../../../../../../src/modules/shared', () => {
     };
 });
 
-jest.mock('../../../../../../../src/modules/chat/components/molecules/send_button', () => {
+jest.mock('@/src/modules/chat/components/molecules/send_button', () => {
     const { TouchableOpacity, Text } = require('react-native');
     return {
         SendButton: ({ onPress }: any) => (

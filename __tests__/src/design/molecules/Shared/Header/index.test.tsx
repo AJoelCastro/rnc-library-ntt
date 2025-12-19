@@ -1,5 +1,5 @@
 import { render, fireEvent } from '@testing-library/react-native';
-import { Header } from '../../../../../../src/design/molecules/Shared/Header';
+import { Header } from '@/src/design/molecules/Shared/Header';
 
 describe('Header', () => {
     it('renders title', () => {
