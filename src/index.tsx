@@ -1,8 +1,8 @@
 import RncLibraryNtt, { type DeviceInfo } from './NativeRncLibraryNtt';
 import { Button, type ButtonType, ModalComponent, InputPassword, Header, Selector, InputEmail, InputWithDelete } from './modules/shared';
-import { TransactionItem, type Transaction, TransactionHeader, TransactionsList, Card, ServiceItem , type ServiceItemProps} from './modules/transaction';
+import { TransactionItem, type Transaction, TransactionHeader, TransactionsList, Card, ServiceItem, type ServiceItemProps } from './modules/transaction';
 import { ConfigItem } from './modules/configuration';
-import { ChatSession } from './modules/chat';
+import { ChatSession } from './design';
 import { ConnectionBadge, NetworkStatusCard, useNetworkMonitor, type ConnectionInfo } from './modules/network_monitor';
 import { SecureStorage } from './modules/secure_storage/store/SecureStorage';
 
