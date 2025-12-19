@@ -1,5 +1,5 @@
 import { render, act } from '@testing-library/react-native';
-import { TransactionsList } from '@/modules/transaction/components/organisms/TransactionList';
+import { TransactionsList } from '@/src/design/organisms/transaction/TransactionList';
 
 describe('TransactionsList', () => {
     beforeEach(() => {

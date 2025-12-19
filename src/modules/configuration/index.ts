@@ -1,1 +1,0 @@
-export { ConfigItem } from './components/molecules/config_item'

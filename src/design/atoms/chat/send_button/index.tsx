@@ -1,11 +1,10 @@
 import { TouchableOpacity, Text, StyleSheet } from 'react-native'
-import {} from 'react'
-import type { SendButtonProps } from '@/modules/chat/interfaces'
+import type { SendButtonProps } from '@/src/interfaces'
 
-export const SendButton = ({onPress}: SendButtonProps) => {
+export const SendButton = ({ onPress }: SendButtonProps) => {
   return (
     <TouchableOpacity style={styles.sendButton} onPress={onPress} activeOpacity={0.8}>
-        <Text style={styles.sendIcon}>{'>'}</Text>
+      <Text style={styles.sendIcon}>{'>'}</Text>
     </TouchableOpacity>
   )
 }

@@ -1,7 +1,7 @@
 import { FlatList, View, StyleSheet, Text } from 'react-native';
 import { TransactionItem } from './TransactionItem';
 import { TransactionHeader } from './TransactionHeader';
-import type { Transaction, TransactionHeaderListProps } from '../../interfaces';
+import type { Transaction, TransactionHeaderListProps } from '../../../modules/transaction/interfaces';
 import { useState } from 'react';
 
 const defaultTransactions: Transaction[] = [

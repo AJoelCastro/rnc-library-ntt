@@ -1,5 +1,5 @@
 import { render, fireEvent } from '@testing-library/react-native';
-import { SendButton } from '@/modules/chat/components/molecules/send_button';
+import { SendButton } from '@/src/design/atoms/chat/send_button';
 
 describe('SendButton', () => {
     it('renders correctly', () => {

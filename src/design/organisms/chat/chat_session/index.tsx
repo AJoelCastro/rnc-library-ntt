@@ -9,7 +9,7 @@ import {
 } from 'react-native'
 import type { Message } from '../../../types'
 import { InputWithDelete } from '../../../../shared'
-import { SendButton } from '../../molecules/send_button'
+import { SendButton } from '../../../../../design/atoms/chat/send_button'
 
 type Props = {
   messages: Message[]
