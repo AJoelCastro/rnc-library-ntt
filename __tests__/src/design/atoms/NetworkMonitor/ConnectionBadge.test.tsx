@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react-native';
-import { ConnectionBadge } from '@/src/design/atoms/NetworkMonitor/ConnectionBadge';
+import { ConnectionBadge } from '../../../../../src/design/atoms/NetworkMonitor/ConnectionBadge';
 
 describe('ConnectionBadge', () => {
     it('renders wifi connected state correctly', () => {

@@ -1,6 +1,6 @@
 import { render, fireEvent } from '@testing-library/react-native';
 import { Text } from 'react-native';
-import { ConfigItem } from '@/src/design/molecules/Configuration/ConfigItem';
+import { ConfigItem } from '../../../../../../src/design/molecules/Configuration/ConfigItem';
 
 describe('ConfigItem', () => {
     it('renders with default props', () => {

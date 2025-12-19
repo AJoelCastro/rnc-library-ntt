@@ -1,5 +1,5 @@
 import { render, fireEvent } from '@testing-library/react-native';
-import { Button } from '@/src/design/atoms/Shared/Button';
+import { Button } from '../../../../../../src/design/atoms/Shared/Button';
 
 describe('Button', () => {
     it('renders title correctly', () => {

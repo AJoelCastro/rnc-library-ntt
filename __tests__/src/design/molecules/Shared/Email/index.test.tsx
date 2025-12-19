@@ -1,5 +1,5 @@
 import { render, fireEvent } from '@testing-library/react-native';
-import { InputEmail } from '@/src/design/molecules/Shared/Email';
+import { InputEmail } from '../../../../../../src/design/molecules/Shared/Email';
 
 describe('InputEmail', () => {
     it('renders with initial value', () => {
