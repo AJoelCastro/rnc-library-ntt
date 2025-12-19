@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react-native';
-import { TransactionHeader } from '@/modules/transaction/components/organisms/TransactionHeader';
-import type { Transaction } from '@/modules/transaction/interfaces';
+import { TransactionHeader } from '../../../../../src/design/organisms/Transaction/TransactionHeader';
+import type { Transaction } from '../../../../../src/interfaces';
 
 describe('TransactionHeader', () => {
     it('renders summary correctly', () => {

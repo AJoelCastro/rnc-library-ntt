@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react-native';
-import { Card } from '@/modules/transaction/components/molecules/card';
+import { Card } from '../../../../../../src/design/molecules/Transaction/Card';
 
 describe('Card', () => {
     it('renders with default props', () => {

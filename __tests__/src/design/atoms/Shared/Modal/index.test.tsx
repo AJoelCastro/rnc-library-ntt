@@ -1,5 +1,5 @@
 import { render, fireEvent } from '@testing-library/react-native';
-import { ModalComponent } from '@/modules/shared/components/atoms/modal';
+import { ModalComponent } from '../../../../../../src/design/atoms/Shared/Modal';
 
 describe('ModalComponent', () => {
     it('renders correctly when visible', () => {
