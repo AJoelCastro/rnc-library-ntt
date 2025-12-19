@@ -1,10 +1,9 @@
 import RncLibraryNtt, { type DeviceInfo } from './NativeRncLibraryNtt';
-import { Button, type ButtonType, ModalComponent, InputPassword, Header, Selector, InputEmail, InputWithDelete } from './modules/shared';
-import { TransactionItem, type Transaction, TransactionHeader, TransactionsList, Card, ServiceItem, type ServiceItemProps } from './modules/Transaction';
-import { ConfigItem } from './modules/configuration';
-import { ChatSession } from './design';
-import { ConnectionBadge, NetworkStatusCard, useNetworkMonitor, type ConnectionInfo } from './modules/NetworkMonitor';
+import { useNetworkMonitor } from './modules/NetworkMonitor';
 import { SecureStorage } from './modules/SecureStorage/store/SecureStorage';
+import type { ConnectionInfo, } from './types'
+import { ChatSession, ConnectionBadge, NetworkStatusCard, ConfigItem, TransactionItem, TransactionHeader, TransactionsList, Card, ServiceItem, Button, ModalComponent, InputPassword, Header, Selector, InputEmail, InputWithDelete } from './design'
+import type { ServiceItemProps, Transaction, ButtonType } from './interfaces'
 
 export function getDeviceInfo(): DeviceInfo {
   return RncLibraryNtt.getDeviceInfo();
