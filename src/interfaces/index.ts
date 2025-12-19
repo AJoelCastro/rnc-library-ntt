@@ -1,3 +1,6 @@
+import type { ViewStyle } from "react-native"
+import type { CardType } from "../types"
+
 // CHAT
 
 export interface SendButtonProps {
@@ -5,12 +8,8 @@ export interface SendButtonProps {
 }
 
 
+
 // TRANSACTION
-
-import type { ViewStyle } from "react-native"
-import type { CardType } from "../types"
-
-// MOLECULES INTERFACES
 
 export interface CardProps {
     type?: CardType
@@ -43,6 +42,7 @@ export interface ServiceItemProps {
     title: string
     onPress?: () => void
 }
+
 
 
 // SHARED
