@@ -34,6 +34,6 @@ export { ConfigItem } from './molecules/Configuration/ConfigItem'
 // NETWORK MONITOR
 
 export { ConnectionBadge } from './atoms/NetworkMonitor/ConnectionBadge';
-export { NetworkStatusCard } from './molecules/NetworkMonitor/NetworkStatusCard';
+export { NetworkStatusCard } from './molecules/networkMonitor/NetworkStatusCard';
 export { useNetworkMonitor } from '../modules/NetworkMonitor/hooks/useNetworkMonitor';
 export { type ConnectionInfo } from '../types';
