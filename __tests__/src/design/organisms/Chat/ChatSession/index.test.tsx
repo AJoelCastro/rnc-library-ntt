@@ -1,6 +1,6 @@
 import { render, fireEvent, act, waitFor } from '@testing-library/react-native';
-import { ChatSession } from '../../../../../../../src/modules/chat/components/organisms/chat_session';
-import { type Message } from '../../../../../../../src/types';
+import { ChatSession } from '../../../../../../src/design/organisms/Chat/ChatSession';
+import { type Message } from '../../../../../../src/types';
 
 // Mock dependencies
 jest.mock('../../../../../../../src/modules/shared', () => {
