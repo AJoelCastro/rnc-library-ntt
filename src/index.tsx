@@ -1,9 +1,9 @@
-import RncLibraryNtt, { type DeviceInfo } from './NativeRncLibraryNtt';
+import RncLibraryNtt from './NativeRncLibraryNtt';
 import { useNetworkMonitor } from './modules/NetworkMonitor';
 import { SecureStorage } from './modules/SecureStorage/store/SecureStorage';
-import type { ConnectionInfo, } from './types'
+import type { Message, CardType, ModalType, SelectorItem, ConnectionInfo } from './types'
 import { ChatSession, ConnectionBadge, NetworkStatusCard, ConfigItem, TransactionItem, TransactionHeader, TransactionsList, Card, ServiceItem, Button, ModalComponent, InputPassword, Header, Selector, InputEmail, InputWithDelete } from './design'
-import type { ServiceItemProps, Transaction, ButtonType } from './interfaces'
+import type { SendButtonProps, CardProps, TransactionHeaderListProps, TransactionItemProps, ButtonProps, ModalProps, EmailProps, HeaderProps, InputWithDeleteProps, PasswordProps, SelectorProps, ConfigItemProps, ConnectionBadgeProps, DeviceInfo, ButtonType, Transaction, ServiceItemProps } from './interfaces'
 
 export function getDeviceInfo(): DeviceInfo {
   return RncLibraryNtt.getDeviceInfo();
@@ -14,14 +14,12 @@ export const APP_VERSION = '1.0.0';
 
 export {
   TransactionItem,
-  type Transaction,
   TransactionsList,
   TransactionHeader,
   Button,
   InputPassword,
   ModalComponent,
   Selector,
-  type ButtonType,
   Header,
   InputEmail,
   InputWithDelete,
@@ -31,8 +29,14 @@ export {
   ConnectionBadge,
   NetworkStatusCard,
   useNetworkMonitor,
+  type ButtonType,
+  type Transaction,
   type ConnectionInfo,
+  type SelectorItem,
+  type ModalType,
+  type CardType,
+  type Message,
+  type ServiceItemProps,
   SecureStorage,
   ServiceItem,
-  type ServiceItemProps
 }

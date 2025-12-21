@@ -10,7 +10,6 @@ export { TransactionHeader } from './organisms/Transaction/TransactionHeader'
 export { TransactionsList } from './organisms/Transaction/TransactionList'
 export { Card } from './molecules/Transaction/Card'
 export { ServiceItem } from './molecules/Transaction/ServiceItem'
-export type { Transaction, ServiceItemProps } from '../interfaces'
 
 
 // SHARED
@@ -22,7 +21,6 @@ export { ModalComponent } from './atoms/Shared/Modal';
 export { Selector } from './molecules/Shared/Selector';
 export { InputEmail } from './molecules/Shared/Email';
 export { InputWithDelete } from './molecules/Shared/InputWithDelete';
-export type { DeviceInfo, ButtonType } from '../interfaces';
 
 
 // CONFIGURATION 
@@ -36,4 +34,14 @@ export { ConfigItem } from './molecules/Configuration/ConfigItem'
 export { ConnectionBadge } from './atoms/NetworkMonitor/ConnectionBadge';
 export { NetworkStatusCard } from './molecules/NetworkMonitor/NetworkStatusCard';
 export { useNetworkMonitor } from '../modules/NetworkMonitor/hooks/useNetworkMonitor';
-export { type ConnectionInfo } from '../types';
+
+
+// TYPES
+
+export type { Message, CardType, ModalType, SelectorItem, ConnectionInfo } from '../types'
+
+
+
+// INTERFACES
+
+export type { SendButtonProps, CardProps, TransactionHeaderListProps, TransactionItemProps, ButtonProps, ModalProps, EmailProps, HeaderProps, InputWithDeleteProps, PasswordProps, SelectorProps, ConfigItemProps, ConnectionBadgeProps, DeviceInfo, ButtonType, Transaction, ServiceItemProps } from '../interfaces';
